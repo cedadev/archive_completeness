@@ -1,0 +1,6 @@
+*.pyc
+*~
+venv
+*.egg-info
+*_cache.json
+test_output
