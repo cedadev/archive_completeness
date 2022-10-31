@@ -149,7 +149,7 @@ class AnnotatedDirs:
                     self.ad[subdir] = AnnotatedDir(subdir, "missing")
                     
 
-def table(primary, primary_label, primary_total, secondary, secondary_label, secondary_total):
+def printtable(primary, primary_label, primary_total, secondary, secondary_label, secondary_total):
     table = []
     print()
     print("sorted by number")
@@ -182,8 +182,8 @@ def main(filename):
     vols, numbers, number_list, header = ad.summary2()
     ad.save_missing(filename + ".out")
 
-    table(numbers, "Number", ad.total_number, vols, "Volume", ad.total_vol)
-    table(vols, "Volume", ad.total_vol, numbers, "Number", ad.total_number)
+    printtable(numbers, "Number", ad.total_number, vols, "Volume", ad.total_vol)
+    printtable(vols, "Volume", ad.total_vol, numbers, "Number", ad.total_number)
 
     table = []
     print()
