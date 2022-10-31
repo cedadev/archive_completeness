@@ -5,8 +5,12 @@ from fbi_core import archive_summary
 
 cache_filename="fbi_size_cache.json"
 size_cache = {}
-if os.path.exists(cache_filename) and os.path.getmtime(cache_filename) > time.time() - 24*3600:
-    size_cache = json.load(open(cache_filename))
+if os.path.exists(cache_filename):
+    if os.path.getmtime(cache_filename) > time.time() - 24*3600:
+        size_cache = json.load(open(cache_filename))
+    else:
+        os.remove(cache_filename)
+
 
 def save_size_cache():
     json.dump(size_cache, open(cache_filename, "w"))  

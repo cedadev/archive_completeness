@@ -7,7 +7,6 @@ from fbi_core import fbi_listdir
 from tabulate import tabulate
 from .get_fbi_sizes import get_size
 from .get_catalogue_records import get_catalogue_record_paths
-import json
 # report by number, vol, collections
 
 class AnnotatedDir:
@@ -15,11 +14,7 @@ class AnnotatedDir:
         self.directory = directory
         self.annotation = annotation
         collection_bits = directory.split("/")
-        print(collection_bits)
-        if len(collection_bits) > 2:  
-            self.collection = collection_bits[2]
-        else:
-            self.collection = collection_bits[1]
+        self.collection = "/".join(collection_bits[0:3])
     
     @property
     def vol(self):
@@ -45,29 +40,21 @@ class AnnotatedDir:
 
     __repr__ = __str__
 
+
 class AnnotatedDirs:
 
     def __init__(self, ignore_file) -> None:
         self.ignore_file = ignore_file
         self.top_vol, self.top_number, self.total_vol, self.total_number = 0, 0, 0, 0
         self.ad = {}
-        for path in get_catalogue_record_paths():
-            self.ad[path] = AnnotatedDir(path, "catalogue")
 
         with open(self.ignore_file) as fh:
             for line in fh.readlines():
-                bits = line.split("|")
-                vol, number = None, None
-                if len(bits) == 2: 
-                    directory = bits[0].strip()
-                    annotation = bits[1].strip()
-                    annotateddir = AnnotatedDir(directory, annotation)
-                if len(bits) == 4: 
-                    directory = bits[0].strip()
-                    annotation = bits[1].strip()
-                    vol, number = int(float(bits[2].strip())), int(bits[3].strip()) 
-                    annotateddir = AnnotatedDir(directory, annotation, vol=vol, number=number)
-                self.add(annotateddir)
+                ignore_dir = line.strip().rstrip('/')
+                self.ad[ignore_dir] = AnnotatedDir(ignore_dir, "ignore")
+
+        for path, annotation in get_catalogue_record_paths().items():
+            self.ad[path] = AnnotatedDir(path, annotation)
         
     def has_subdirs(self, path):
         for ad_path in self.ad:
@@ -83,52 +70,71 @@ class AnnotatedDirs:
         else:
             return "MISSING"
 
-    def add(self, annotateddir_to_add):
-        print("In add")
-        i = 0 
-        for i, annotateddir in enumerate(self.ad):
-            if annotateddir.directory == annotateddir_to_add.directory:
-                print("skip", i, annotateddir.directory, annotateddir_to_add.directory)
-                return 
-            if annotateddir.directory > annotateddir_to_add.directory:
-                break
-        print("add", i, annotateddir_to_add.directory)    
-        self.ad.insert(i, annotateddir_to_add)
-
-    def save(self, filename):
+    def save_missing(self, filename):
         with open(filename, "w") as fh:
             for annotateddir  in self.ad:
-                fh.write(f"{annotateddir}\n")
+                if self.ad[annotateddir].annotation == "missing":
+                    fh.write(f"{annotateddir}\n")
 
     def summary(self):
         vol_dict = DefaultDict(int)
         number_dict = DefaultDict(int)
-        for annotateddir  in self.ad:
+        for directory in self.ad:
+            annotateddir = self.ad[directory]
             vol_dict[annotateddir.annotation] += annotateddir.vol
             number_dict[annotateddir.annotation] += annotateddir.number
         vol_dict = OrderedDict(sorted(vol_dict.items(), key=lambda x: x[1], reverse=True))
         number_dict = OrderedDict(sorted(number_dict.items(), key=lambda x: x[1], reverse=True))
         return vol_dict, number_dict
 
+    def summary2(self):
+        vol_dict = DefaultDict(int)
+        number_dict = DefaultDict(int)
+        annotations = set()
+        collections = set()
+        for directory in self.ad:
+            annotateddir = self.ad[directory]
+            collection = annotateddir.collection
+            annotation = annotateddir.annotation
+            annotations.add(annotation)
+            collections.add(collection)
+            vol_dict[(annotation, collection)] += annotateddir.vol
+            number_dict[(annotation, collection)] += annotateddir.number
+
+        collections = list(collections)
+        collections.sort()
+        
+        header = ["Collection"]
+        for annotation in annotations:
+            header.append(annotation)
+
+        number_list = []
+        for collection in  collections:
+            row = [collection]
+            number_list.append(row)
+            for annotation in annotations:
+                if (annotation, collection) in number_dict:
+                    row.append(number_dict[(annotation, collection)])
+                else:
+                    row.append(0)
+        
+        vol_dict = OrderedDict(sorted(vol_dict.items(), key=lambda x: x[1], reverse=True))
+        number_dict = OrderedDict(sorted(number_dict.items(), key=lambda x: x[1], reverse=True))
+        return vol_dict, number_dict, number_list, header
+
     def maketop(self):
         self.total_vol, self.total_number = get_size("/")
         self.top_vol, self.top_number = self.total_vol, self.total_number
         #self.top_vol, self.top_number = 0, 0
-        for annotateddir in self.ad:
-            annotateddir.update_size()
+        for directory in self.ad:
+            annotateddir = self.ad[directory]
+            if self.has_subdirs(annotateddir.directory):
+                print(f" ****** {annotateddir.directory} has sub dirs ? ******")
             self.top_vol -= annotateddir.vol
             self.top_number -= annotateddir.number
 
     def __str__(self):
         return f"{self.top_vol} {self.top_number}\n" + str(self.ad)
-
-    def find_annotation(self, path):
-        for annotateddir  in self.ad:
-            if path == annotateddir.directory:
-                return annotateddir.annotation
-            if annotateddir.is_child_path(path):
-                return None
-        return "MISSING"
 
     def walk_the_tree(self, directory: str):
         subdir_records = fbi_listdir(directory, dirs_only=True)
@@ -140,29 +146,44 @@ class AnnotatedDirs:
             else:
                 print(subdir, annotation)
                 if annotation == "MISSING":
-                    self.add(AnnotatedDir(subdir, "missing"))
- 
+                    self.ad[subdir] = AnnotatedDir(subdir, "missing")
+                    
+
+def table(primary, primary_label, primary_total, secondary, secondary_label, secondary_total):
+    table = []
+    print()
+    print("sorted by number")
+    cum_percent_prim, cum_percent_seco = 0, 0
+    for annotation, collection in primary:
+        if annotation in ("published", "removed", "citable", "old", "ignore"):
+            continue
+        prim_value = primary[(annotation, collection)]
+        seco_value = secondary[(annotation, collection)]
+        percent_prim = 100 * prim_value/primary_total
+        percent_seco = 100 * seco_value/secondary_total
+        cum_percent_prim += percent_prim
+        cum_percent_seco += percent_seco
+        if percent_prim < 0.00001:
+            continue
+        table.append([annotation, collection, percent_prim, cum_percent_prim, percent_seco, cum_percent_seco])
+    print(tabulate(table[0:400], headers=["Annotation", "Collection", f"percent by {primary_label}", 
+        f"Cum. percent by {primary_label}",  f"percent by {secondary_label}", f"Cum. percent by {secondary_label}"]))
+
+
 
 @click.command()
 @click.argument("filename", nargs=1)
-@click.option("--path", "-P", type=click.Path(), default="/")
-def main(filename, path):
+def main(filename):
     ad = AnnotatedDirs(filename) 
-    print(ad)
-    # ad.walk_the_tree(path)
+    
+    ad.walk_the_tree("/")
     ad.maketop()
-    print(ad)
-    vols, numbers = ad.summary()
-    ad.save(filename + ".out")
+    
+    vols, numbers, number_list, header = ad.summary2()
+    ad.save_missing(filename + ".out")
 
-    table = []
-    print()
-    print("Missing  by number")
-    for annotation in numbers:
-        number = numbers[annotation]
-        vol = vols[annotation]
-        table.append([annotation, number, 100*number/ad.total_number, vol, 100*vol/ad.total_vol])
-    print(tabulate(table[0:20], headers=["Annotation", "number", "percent by number", "volume", "percent by Volume"]))
+    table(numbers, "Number", ad.total_number, vols, "Volume", ad.total_vol)
+    table(vols, "Volume", ad.total_vol, numbers, "Number", ad.total_number)
 
     table = []
     print()
@@ -171,8 +192,11 @@ def main(filename, path):
         number = numbers[annotation]
         vol = vols[annotation]
         table.append([annotation, number, 100*number/ad.total_number, vol, 100*vol/ad.total_vol])
-    print(tabulate(table[0:20], headers=["Annotation", "number", "percent by number", "volume", "percent by Volume"]))
+    print(tabulate(table[0:100], headers=["Annotation", "number", "percent by number", "volume", "percent by Volume"]))
 
     vol = ad.top_vol
     number = ad.top_number
     print( number, 100*number/ad.total_number, vol, 100*vol/ad.total_vol)
+
+    print()
+    print(tabulate(number_list, headers=header))
