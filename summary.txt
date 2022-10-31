@@ -1,0 +1,663 @@
+ ****** /badc/ujcc has sub dirs ? ******
+
+sorted by number
+Annotation    Collection                            percent by Number    Cum. percent by Number    percent by Volume    Cum. percent by Volume
+------------  ----------------------------------  -------------------  ------------------------  -------------------  ------------------------
+missing       /neodc/nceo_ard                             1.99685                       1.99685          0.220151                     0.220151
+preview       /neodc/comet                                1.68569                       3.68255          0.190024                     0.410175
+working       /neodc/atsrubt                              1.68541                       5.36796          0.102692                     0.512867
+missing       /neodc/esacci                               1.24172                       6.60968          0.0657211                    0.578589
+missing       /badc/cmip6                                 1.20203                       7.81171          6.79409                      7.37268
+missing       /badc/hadcm3                                0.965241                      8.77695          0.0413007                    7.41398
+missing       /neodc/aatsr_multimission                   0.450194                      9.22714          0.356172                     7.77015
+missing       /neodc/slstr_calibration                    0.300739                      9.52788          0.0397176                    7.80987
+missing       /neodc/arsf                                 0.267867                      9.79575          0.422505                     8.23238
+preview       /neodc/esacci                               0.155103                      9.95085          0.638357                     8.87073
+preview       /neodc/globalbedo_broadband_brdf            0.146975                     10.0978           0.228499                     9.09923
+preview       /neodc/sentinel5p                           0.133713                     10.2315           2.22162                     11.3209
+working       /neodc/aatsr_multimission                   0.123513                     10.3551           0.0958946                   11.4167
+missing       /neodc/qa4ecv                               0.102325                     10.4574           0.0635568                   11.4803
+preview       /neodc/sentinel1a                           0.0874913                    10.5449           0.00849304                  11.4888
+missing       /badc/specs                                 0.0792254                    10.6241           0.0193773                   11.5082
+preview       /neodc/sentinel1b                           0.0713814                    10.6955           0.00811783                  11.5163
+preview       /neodc/sentinel3a                           0.0701921                    10.7657           0.0916873                   11.608
+missing       /badc/ccmi                                  0.0437656                    10.8094           0.0373346                   11.6453
+missing       /badc/ukmo-lidarnet                         0.0427201                    10.8522           0.000151867                 11.6455
+missing       /neodc/tls                                  0.0417016                    10.8939           0.0145544                   11.66
+preview       /neodc/lsasaf                               0.0411176                    10.935            0.0472932                   11.7073
+missing       /badc/mst                                   0.0404125                    10.9754           3.86998e-05                 11.7074
+preview       /neodc/qa4ecv                               0.030199                     11.0056           0.0568308                   11.7642
+working       /neodc/sentinel5p                           0.0274807                    11.0331           0.10068                     11.8649
+missing       /badc/cordex                                0.0246269                    11.0577           0.175516                    12.0404
+missing       /neodc/meris                                0.0239848                    11.0817           0.127359                    12.1677
+working       /neodc/esacci                               0.0233578                    11.105            0.00259549                  12.1703
+preview       /neodc/tls                                  0.018257                     11.1233           0.00561123                  12.1759
+missing       /badc/cmip5                                 0.0171979                    11.1405           0.0436795                   12.2196
+missing       /neodc/globalbedo_broadband_albedo          0.0163281                    11.1568           0.0153569                   12.235
+working       /neodc/meris                                0.0150642                    11.1719           0.0843495                   12.3193
+missing       /badc/ukmo-assim                            0.0105399                    11.1824           3.56297e-06                 12.3193
+missing       /badc/ukmo-surface                          0.0103848                    11.1928           0.000102598                 12.3194
+working       /badc/hitemp                                0.00832348                   11.2011           1.06551e-05                 12.3194
+missing       /badc/ipcc-ddc                              0.00797498                   11.2091           6.38011e-05                 12.3195
+missing       /badc/toms                                  0.00775311                   11.2169           6.23637e-06                 12.3195
+missing       /badc/ccmval                                0.0073991                    11.2243           0.0273526                   12.3469
+missing       /badc/ukmo-metdb                            0.00529826                   11.2296           0.000268953                 12.3471
+missing       /badc/ncas-mobile                           0.00509701                   11.2347           0.00176799                  12.3489
+missing       /badc/ukcp18                                0.00468143                   11.2393           6.47223e-05                 12.349
+working       /neodc/qa4ecv                               0.00467127                   11.244            0.000968436                 12.3499
+working       /neodc/avhrr3_metop_c                       0.00420835                   11.2482           0.0250654                   12.375
+missing       /neodc/aast_leicester                       0.00343237                   11.2516           0.000738753                 12.3757
+missing       /badc/sage2                                 0.00341495                   11.2551           1.73616e-06                 12.3757
+missing       /badc/penlee                                0.00261777                   11.2577           3.59465e-06                 12.3758
+preview       /badc/deposited2020                         0.00233055                   11.26             0.00274096                  12.3785
+working       /neodc/arsf                                 0.00231138                   11.2623           0.00555401                  12.384
+missing       /badc/link                                  0.00183162                   11.2642           0.000223053                 12.3843
+preview       /badc/ukmo-hadobs                           0.00179474                   11.2659           0.000100345                 12.3844
+missing       /neodc/c3s_sst                              0.00165563                   11.2676           0.000438296                 12.3848
+working       /neodc/c3s_sst                              0.00126968                   11.2689           0.000864414                 12.3857
+missing       /badc/cwvc                                  0.000749842                  11.2696           5.38407e-07                 12.3857
+missing       /neodc/mipas-oxford                         0.000739097                  11.2704           2.99493e-05                 12.3857
+missing       /badc/ukmo-nimrod                           0.000669108                  11.271            8.60867e-06                 12.3857
+missing       /badc/rapid                                 0.00050822                   11.2715           3.85916e-06                 12.3857
+preview       /badc/osca                                  0.000460592                  11.272            4.02826e-05                 12.3858
+missing       /badc/chilbolton                            0.000457398                  11.2725           3.22185e-07                 12.3858
+working       /badc/ukmo-cardington                       0.000390022                  11.2728           4.83059e-07                 12.3858
+preview       /badc/ar6_wg1                               0.000385957                  11.2732           7.16812e-06                 12.3858
+missing       /badc/glocaem                               0.000283151                  11.2735           3.78793e-07                 12.3858
+working       /neodc/sentinel3a                           0.000267469                  11.2738           0.000227133                 12.386
+missing       /badc/eufar                                 0.000235814                  11.274            0.000926322                 12.3869
+missing       /badc/CDs                                   0.000223907                  11.2742           2.66253e-06                 12.3869
+preview       /badc/ccmi                                  0.000217228                  11.2745           0.00244785                  12.3894
+missing       /badc/cru                                   0.000182669                  11.2746           3.42012e-05                 12.3894
+working       /badc/ncas-mobile                           0.000173085                  11.2748           6.48616e-06                 12.3894
+missing       /badc/higem                                 0.000151885                  11.275            5.50918e-06                 12.3894
+missing       /badc/wcrp-ccmi                             0.000148691                  11.2751           0.00128529                  12.3907
+working       /badc/fund                                  0.000140269                  11.2753           1.43128e-05                 12.3907
+preview       /badc/igp                                   0.000132718                  11.2754           0.000560753                 12.3913
+working       /badc/aphh                                  0.000122554                  11.2755           6.05478e-07                 12.3913
+working       /neodc/landmap                              0.000119649                  11.2756           0.000215571                 12.3915
+missing       /neodc/gome2_metop_c                        0.000115874                  11.2757           0.00106448                  12.3926
+missing       /badc/corral                                9.43837e-05                  11.2758           2.97453e-08                 12.3926
+missing       /badc/faam                                  7.02795e-05                  11.2759           6.52581e-05                 12.3926
+missing       /bodc/rvs200182                             6.47617e-05                  11.276            1.29234e-05                 12.3926
+missing       /badc/osca                                  6.30192e-05                  11.276            1.8596e-06                  12.3926
+missing       /badc/ukmo-synop                            5.37261e-05                  11.2761           8.75509e-07                 12.3926
+missing       /badc/evoflood                              5.2274e-05                   11.2761           0.0443668                   12.437
+missing       /badc/ukmo-hadobs                           4.41425e-05                  11.2762           5.74394e-06                 12.437
+missing       /badc/ukmo-rad-hires                        3.45589e-05                  11.2762           3.56505e-08                 12.437
+missing       /badc/ncas-cvao                             3.39781e-05                  11.2763           2.60122e-06                 12.437
+preview       /neodc/arsf                                 3.19452e-05                  11.2763           0.000478728                 12.4375
+missing       /badc/ar6_wg1                               2.67178e-05                  11.2763           4.48283e-08                 12.4375
+missing       /badc/ecmwf-trj                             2.58466e-05                  11.2763           3.9744e-09                  12.4375
+working       /badc/appraise                              2.14904e-05                  11.2764           3.11824e-07                 12.4375
+preview       /badc/moccha                                2.00384e-05                  11.2764           8.97502e-07                 12.4375
+working       /badc/ugamp-o3-climatology                  1.77151e-05                  11.2764           3.42805e-09                 12.4375
+missing       /badc/ncas-wao                              1.45206e-05                  11.2764           7.12816e-07                 12.4375
+missing       /badc/ukmo-hadat                            1.21973e-05                  11.2764           2.18048e-08                 12.4375
+preview       /badc/cru                                   1.19069e-05                  11.2764           4.08482e-06                 12.4375
+missing       /badc/op3                                   1.10356e-05                  11.2765           1.37251e-06                 12.4375
+missing       /neodc/ncaveo_lcm2000                       1.04548e-05                  11.2765           9.9848e-11                  12.4375
+
+sorted by number
+Annotation    Collection                            percent by Volume    Cum. percent by Volume    percent by Number    Cum. percent by Number
+------------  ----------------------------------  -------------------  ------------------------  -------------------  ------------------------
+missing       /badc/cmip6                                 6.79409                       6.79409          1.20203                       1.20203
+preview       /neodc/sentinel5p                           2.22162                       9.01571          0.133713                      1.33574
+preview       /neodc/esacci                               0.638357                      9.65407          0.155103                      1.49084
+missing       /neodc/arsf                                 0.422505                     10.0766           0.267867                      1.75871
+missing       /neodc/aatsr_multimission                   0.356172                     10.4327           0.450194                      2.20891
+preview       /neodc/globalbedo_broadband_brdf            0.228499                     10.6612           0.146975                      2.35588
+missing       /neodc/nceo_ard                             0.220151                     10.8814           1.99685                       4.35274
+preview       /neodc/comet                                0.190024                     11.0714           1.68569                       6.03843
+missing       /badc/cordex                                0.175516                     11.2469           0.0246269                     6.06306
+missing       /neodc/meris                                0.127359                     11.3743           0.0239848                     6.08704
+working       /neodc/atsrubt                              0.102692                     11.477            1.68541                       7.77245
+working       /neodc/sentinel5p                           0.10068                      11.5777           0.0274807                     7.79993
+working       /neodc/aatsr_multimission                   0.0958946                    11.6736           0.123513                      7.92344
+preview       /neodc/sentinel3a                           0.0916873                    11.7653           0.0701921                     7.99364
+working       /neodc/meris                                0.0843495                    11.8496           0.0150642                     8.0087
+missing       /neodc/esacci                               0.0657211                    11.9153           1.24172                       9.25042
+missing       /neodc/qa4ecv                               0.0635568                    11.9789           0.102325                      9.35275
+preview       /neodc/qa4ecv                               0.0568308                    12.0357           0.030199                      9.38295
+preview       /neodc/lsasaf                               0.0472932                    12.083            0.0411176                     9.42406
+missing       /badc/evoflood                              0.0443668                    12.1274           5.2274e-05                    9.42412
+missing       /badc/cmip5                                 0.0436795                    12.171            0.0171979                     9.44131
+missing       /badc/hadcm3                                0.0413007                    12.2124           0.965241                     10.4066
+missing       /neodc/slstr_calibration                    0.0397176                    12.2521           0.300739                     10.7073
+missing       /badc/ccmi                                  0.0373346                    12.2894           0.0437656                    10.7511
+missing       /badc/ccmval                                0.0273526                    12.3168           0.0073991                    10.7585
+working       /neodc/avhrr3_metop_c                       0.0250654                    12.3418           0.00420835                   10.7627
+missing       /badc/specs                                 0.0193773                    12.3612           0.0792254                    10.8419
+missing       /neodc/globalbedo_broadband_albedo          0.0153569                    12.3766           0.0163281                    10.8582
+missing       /neodc/tls                                  0.0145544                    12.3911           0.0417016                    10.8999
+preview       /neodc/sentinel1a                           0.00849304                   12.3996           0.0874913                    10.9874
+preview       /neodc/sentinel1b                           0.00811783                   12.4077           0.0713814                    11.0588
+preview       /neodc/tls                                  0.00561123                   12.4133           0.018257                     11.0771
+working       /neodc/arsf                                 0.00555401                   12.4189           0.00231138                   11.0794
+preview       /badc/deposited2020                         0.00274096                   12.4216           0.00233055                   11.0817
+working       /neodc/esacci                               0.00259549                   12.4242           0.0233578                    11.105
+preview       /badc/ccmi                                  0.00244785                   12.4267           0.000217228                  11.1053
+missing       /badc/ncas-mobile                           0.00176799                   12.4284           0.00509701                   11.1104
+missing       /badc/wcrp-ccmi                             0.00128529                   12.4297           0.000148691                  11.1105
+missing       /neodc/gome2_metop_c                        0.00106448                   12.4308           0.000115874                  11.1106
+working       /neodc/qa4ecv                               0.000968436                  12.4318           0.00467127                   11.1153
+missing       /badc/eufar                                 0.000926322                  12.4327           0.000235814                  11.1155
+working       /neodc/c3s_sst                              0.000864414                  12.4335           0.00126968                   11.1168
+missing       /neodc/aast_leicester                       0.000738753                  12.4343           0.00343237                   11.1202
+preview       /badc/igp                                   0.000560753                  12.4348           0.000132718                  11.1204
+preview       /neodc/arsf                                 0.000478728                  12.4353           3.19452e-05                  11.1204
+missing       /neodc/c3s_sst                              0.000438296                  12.4358           0.00165563                   11.1221
+missing       /badc/ukmo-metdb                            0.000268953                  12.436            0.00529826                   11.1274
+preview       /badc/deposited2022                         0.000266664                  12.4363           2.90411e-06                  11.1274
+missing       /neodc/landmap                              0.000264796                  12.4366           9.58357e-06                  11.1274
+working       /neodc/sentinel3a                           0.000227133                  12.4368           0.000267469                  11.1276
+missing       /badc/link                                  0.000223053                  12.437            0.00183162                   11.1295
+working       /neodc/landmap                              0.000215571                  12.4372           0.000119649                  11.1296
+missing       /badc/ukmo-lidarnet                         0.000151867                  12.4374           0.0427201                    11.1723
+missing       /badc/ukmo-surface                          0.000102598                  12.4375           0.0103848                    11.1827
+preview       /badc/ukmo-hadobs                           0.000100345                  12.4376           0.00179474                   11.1845
+missing       /badc/faam                                  6.52581e-05                  12.4376           7.02795e-05                  11.1846
+missing       /badc/ukcp18                                6.47223e-05                  12.4377           0.00468143                   11.1892
+missing       /badc/ipcc-ddc                              6.38011e-05                  12.4378           0.00797498                   11.1972
+preview       /badc/osca                                  4.02826e-05                  12.4378           0.000460592                  11.1977
+missing       /badc/mst                                   3.86998e-05                  12.4379           0.0404125                    11.2381
+missing       /badc/cru                                   3.42012e-05                  12.4379           0.000182669                  11.2383
+missing       /neodc/mipas-oxford                         2.99493e-05                  12.4379           0.000739097                  11.239
+working       /badc/fund                                  1.43128e-05                  12.4379           0.000140269                  11.2391
+missing       /bodc/rvs200182                             1.29234e-05                  12.4379           6.47617e-05                  11.2392
+working       /badc/hitemp                                1.06551e-05                  12.438            0.00832348                   11.2475
+
+Missing  by Vol
+Annotation                                         number    percent by number       volume    percent by Volume
+-----------------------------------------------  --------  -------------------  -----------  -------------------
+('published', '/neodc/sentinel1a')                9923029          2.88176      5.55597e+15           22.7918
+('published', '/neodc/sentinel1b')                5354544          1.55502      3.10822e+15           12.7506
+('published', '/badc/cmip6')                      3610777          1.04861      2.21382e+15            9.08159
+('published', '/neodc/modis')                    38903828         11.2981       1.77567e+15            7.2842
+('missing', '/badc/cmip6')                        4139056          1.20203      1.6562e+15             6.79409
+('published', '/neodc/sentinel2a')                7621677          2.21342      1.24369e+15            5.10187
+('published', '/badc/cmip5')                      3155925          0.916516     1.20116e+15            4.92744
+('published', '/neodc/sentinel3a')                7487003          2.17431      1.16312e+15            4.77138
+('published', '/neodc/sentinel3b')                4324439          1.25587      5.92414e+14            2.43021
+('preview', '/neodc/sentinel5p')                   460427          0.133713     5.41566e+14            2.22162
+('published', '/neodc/sentinel2b')                4068586          1.18156      5.04543e+14            2.06974
+('published', '/badc/ecmwf-era5')                25890581          7.51892      4.22711e+14            1.73405
+('published', '/neodc/esacci')                    1809373          0.525462     3.85691e+14            1.58219
+('published', '/badc/ukmo-nwp')                   8291905          2.40806      2.76604e+14            1.13469
+('published', '/neodc/iasi_metop_a')               185528          0.0538794    2.65424e+14            1.08883
+('preview', '/neodc/esacci')                       534080          0.155103     1.55613e+14            0.638357
+('published', '/neodc/aatsr_multimission')        3085739          0.896133     1.52449e+14            0.625379
+('published', '/neodc/sentinel_ard')               369856          0.10741      1.50297e+14            0.616551
+('published', '/badc/noaa-20cr-v2')              25764095          7.48218      1.21217e+14            0.497257
+('published', '/badc/ukcp18')                      410032          0.119078     1.17911e+14            0.483698
+('published', '/badc/higem')                       290226          0.0842849    1.08044e+14            0.443222
+('published', '/badc/wcrp-ccmi')                   368537          0.107027     1.07153e+14            0.439566
+('missing', '/neodc/arsf')                         922372          0.267867     1.02994e+14            0.422505
+('published', '/neodc/iasi_metop_b')                75689          0.0219809    9.67439e+13            0.396865
+('published', '/badc/ujcc')                        258472          0.0750632    9.61395e+13            0.394385
+('missing', '/neodc/aatsr_multimission')          1550194          0.450194     8.68243e+13            0.356172
+('published', '/badc/ecmwf-era51')                4234398          1.22972      7.81874e+13            0.320742
+('citable', '/neodc/esacci')                      4808037          1.39631      7.45683e+13            0.305896
+('published', '/badc/cascade')                      33279          0.0096646    7.01747e+13            0.287872
+('citable', '/neodc/eustace')                     6668618          1.93664      6.72068e+13            0.275697
+('published', '/badc/ecmwf-era-interim')          1359655          0.394859     6.47099e+13            0.265454
+('ignore', '/badc/ukmo-nimrod')                     99793          0.028981     6.46711e+13            0.265295
+('published', '/neodc/gome2_metop_a')               88729          0.0257679    5.60687e+13            0.230006
+('preview', '/neodc/globalbedo_broadband_brdf')    506093          0.146975     5.57013e+13            0.228499
+('published', '/badc/eiscat')                        8711          0.00252977   5.39672e+13            0.221385
+('missing', '/neodc/nceo_ard')                    6875954          1.99685      5.36663e+13            0.220151
+('published', '/neodc/sentinel5p')                 628657          0.182569     5.08887e+13            0.208756
+('published', '/badc/specs')                      3744836          1.08754      4.92107e+13            0.201873
+('preview', '/neodc/comet')                       5804502          1.68569      4.63224e+13            0.190024
+('published', '/badc/eucleia')                      24641          0.00715602   4.43923e+13            0.182107
+('citable', '/bodc/BAS210037')                      72041          0.0209215    4.2947e+13             0.176178
+('missing', '/badc/cordex')                         84800          0.0246269    4.27857e+13            0.175516
+('published', '/neodc/caliop')                     843536          0.244972     4.10962e+13            0.168586
+('citable', '/bodc/BAS210039')                      66601          0.0193417    3.93787e+13            0.16154
+('published', '/badc/ukmo-nimrod')                 169959          0.049358     3.64705e+13            0.14961
+('published', '/badc/cmip3_drs')                    75403          0.0218979    3.50149e+13            0.143639
+('ignore', '/ngdc')                                142073          0.0412596    3.29994e+13            0.135371
+('citable', '/badc/weather_at_home')               738275          0.214403     3.248e+13              0.13324
+('published', '/badc/rcemip')                       33594          0.00975608   3.23404e+13            0.132667
+('published', '/neodc/avhrr3_metop_a')              75157          0.0218264    3.19411e+13            0.131029
+('missing', '/neodc/meris')                         82589          0.0239848    3.10463e+13            0.127359
+('published', '/neodc/fiduceo')                   2025759          0.588303     2.76703e+13            0.11351
+('published', '/neodc/iasi_metop_c')                12820          0.00372307   2.65536e+13            0.108929
+('published', '/neodc/arsf')                       181659          0.0527558    2.58446e+13            0.10602
+('working', '/neodc/atsrubt')                     5803528          1.68541      2.50334e+13            0.102692
+('working', '/neodc/sentinel5p')                    94627          0.0274807    2.45428e+13            0.10068
+('published', '/badc/hadgem1')                     117403          0.0340952    2.34694e+13            0.0962766
+('working', '/neodc/aatsr_multimission')           425304          0.123513     2.33763e+13            0.0958946
+('published', '/neodc/mipas')                      144786          0.0420475    2.30244e+13            0.0944512
+('published', '/neodc/avhrr_gac')                  747080          0.21696      2.27434e+13            0.0932986
+('preview', '/neodc/sentinel3a')                   241699          0.0701921    2.23507e+13            0.0916873
+('published', '/badc/impala')                      126487          0.0367333    2.20162e+13            0.0903154
+('citable', '/bodc/BAS210038')                      36021          0.0104609    2.15813e+13            0.0885312
+('published', '/bodc/UOX220077')                      169          4.90795e-05  2.13726e+13            0.0876752
+('published', '/neodc/gome2_metop_b')               32561          0.00945608   2.10873e+13            0.0865046
+('published', '/badc/ukmo-africa-lam')              71569          0.0207844    2.07166e+13            0.084984
+('working', '/neodc/meris')                         51872          0.0150642    2.05619e+13            0.0843495
+('citable', '/bodc/SOC220065')                      37972          0.0110275    2.01804e+13            0.0827842
+('published', '/neodc/avhrr3_metop_b')              47183          0.0137025    2.01346e+13            0.0825966
+('published', '/neodc/meris')                       40550          0.0117762    1.7018e+13             0.0698117
+('ignore', '/neodc/aatsr_multimission')            258639          0.0751117    1.61886e+13            0.0664092
+('missing', '/neodc/esacci')                      4275734          1.24172      1.60209e+13            0.0657211
+('published', '/badc/euroclim500')                  17873          0.00519052   1.59959e+13            0.0656186
+('missing', '/neodc/qa4ecv')                       352344          0.102325     1.54933e+13            0.0635568
+('published', '/badc/apposite')                    260508          0.0756545    1.48818e+13            0.0610484
+('citable', '/badc/deposited2021')                 409192          0.118834     1.41933e+13            0.0582238
+('preview', '/neodc/qa4ecv')                       103987          0.030199     1.38537e+13            0.0568308
+('published', '/badc/deposited2017')                59692          0.0173352    1.34977e+13            0.0553704
+('published', '/badc/amps_antarctic')                7955          0.00231022   1.33108e+13            0.0546037
+('published', '/neodc/landsat8')                    84077          0.0244169    1.27612e+13            0.0523494
+('published', '/badc/hadrm3')                     1598670          0.464272     1.18107e+13            0.0484502
+('preview', '/neodc/lsasaf')                       141584          0.0411176    1.15287e+13            0.0472932
+('published', '/neodc/sciamachy')                   94982          0.0275838    1.1242e+13             0.0461173
+('published', '/badc/ukmo-assim')                   25518          0.00741072   1.10235e+13            0.0452209
+('missing', '/badc/evoflood')                         180          5.2274e-05   1.08153e+13            0.0443668
+('missing', '/badc/cmip5')                          59219          0.0171979    1.06478e+13            0.0436795
+('ignore', '/edc')                                  67756          0.0196771    1.03804e+13            0.0425829
+('citable', '/neodc/oltraj')                        24080          0.0069931    1.03792e+13            0.0425778
+('missing', '/badc/hadcm3')                       3323703          0.965241     1.00679e+13            0.0413007
+('published', '/badc/hadgem2ao')                    30039          0.00872366   9.90878e+12            0.040648
+('published', '/badc/cwvc')                        229636          0.0666889    9.81075e+12            0.0402458
+('citable', '/badc/acruise')                      1132861          0.328996     9.77188e+12            0.0400864
+('missing', '/neodc/slstr_calibration')           1035561          0.300739     9.68198e+12            0.0397176
+('published', '/neodc/avhrr_dundee')               235543          0.0684043    9.5605e+12             0.0392193
+('missing', '/badc/ccmi')                          150702          0.0437656    9.10108e+12            0.0373346
+('ignore', '/sparc')                              1323233          0.384282     9.02133e+12            0.0370075
+('citable', '/badc/ncas-mobile')                   333543          0.0968647    8.66067e+12            0.0355279
+('published', '/neodc/misr')                       292029          0.0848085    8.18931e+12            0.0335943
+('citable', '/badc/sg-wex')                          5982          0.00173724   7.05177e+12            0.0289279
+('published', '/badc/rapid')                       277116          0.0804776    6.85015e+12            0.0281008
+-114710 -0.03331307840471285 -47042282370125.0 -0.1929777008351135
+
+Collection                                 missing    ignore    preview    published    citable    old    working    removed
+---------------------------------------  ---------  --------  ---------  -----------  ---------  -----  ---------  ---------
+/badc/.testing                                   0      2833          0            0          0      0          0          0
+/badc/.testing2                                  0         1          0            0          0      0          0          0
+/badc/ARCHIVE_INFO                               0      2060          0            0          0      0          0          0
+/badc/CDs                                      771      5027          0       194228          0      0          0          0
+/badc/a-cure                                     0         0          0          110          0      0          0          0
+/badc/abacus                                     0         3          0            6          0      0          0          0
+/badc/accacia                                    1         1          0          674         88      0          0          0
+/badc/accmip                                     0         0          0       283233          0      0          0          0
+/badc/acid-deposition                            0         0          0           21          0      0          0          0
+/badc/acid-pruf                                  4         0          0            0          0      0          0          0
+/badc/acites                                     0        18          0          110          0      0          0          0
+/badc/acruise                                    0         0          0            0    1132861      0          0          0
+/badc/acse                                       0         0          0            0     349592      0          0          0
+/badc/acsis                                      0         0          0         5106         66      0          0          0
+/badc/acsoe                                      2       141          0        30956          0      0          0          0
+/badc/active                                     5         6          0           90          0      0          0          0
+/badc/adriex                                     1        10          0         4100          0      0          0          0
+/badc/amazonica                                  0         0          0           10          0      0          0          0
+/badc/amma                                       1        10          0       129372          0      0          0          0
+/badc/amps_antarctic                             0      1133          0         7955          0      0          0          0
+/badc/aphh                                       0         0          0       152455         57      0        422          0
+/badc/apposite                                   0         0          0       260508          0      0          0          0
+/badc/appraise                                   0         6          0          118          0      0         74          0
+/badc/ar6_sr15                                   0         0          9            0          0      0          0          0
+/badc/ar6_wg1                                   92         0       1329          496        184      0          0          0
+/badc/armagh                                     0        12          0          977          0      0          0          0
+/badc/asalasca                                   0         0          0         4352          0      0          0          0
+/badc/autex-wintex                              12         0          0            0          0      0          0          0
+/badc/bas                                        0        22          0         6865          0      0          0          0
+/badc/bas-aircraft                               2         0          0            0          0      0          0          0
+/badc/bodeker-scientific-ozone                   0         3          0           22          0      0          0          0
+/badc/bolton                                     0         7          0         4021          0      0          0          0
+/badc/bortas                                     1         2          0           50          0      0          0          0
+/badc/buniaac                                    0         0          0           16          0      0          0          0
+/badc/caesar                                     1       256          0            0          0      0         15          0
+/badc/cap                                        0         2          0          330          0      0          0          0
+/badc/capeverde                                  5         0          0        86548          0      0          0          0
+/badc/cascade                                    4         0          0        33279          0      0          0          0
+/badc/cast                                       0         2          0           44          0      0          0          0
+/badc/ccmi                                  150702         0        748         1295          0      0          0          0
+/badc/ccmval                                 25478        44          0         3421          0      0          0          0
+/badc/ceh-pan                                    0         0          0            0          8      0          0          0
+/badc/ch4-n2o-hotspots                           0         0          0            4          6      0          0          0
+/badc/chablis                                    0         4          0          131          0      0          0          0
+/badc/chilbolton                              1575      2308          0      2931303      21868      0          0          0
+/badc/chirps                                     0         0          0         1018          0      0          0          0
+/badc/cira                                       5        17          0           15          0      0          0          0
+/badc/claesl3                                    0       150          0        39188          0      0          0          0
+/badc/claus                                      0        42          0       456032          0      0          0          0
+/badc/clearflo                                   0         1          0        40561          0      0          0          0
+/badc/cloudmap                                   0        12          0       490364          0      0          0          0
+/badc/cmip3_drs                                  0      5265          0        75403          0      0          0          0
+/badc/cmip5                                  59219    204724          0      3155925          0      0          0          0
+/badc/cmip6                                4139056      1292          0      3610777          0      0          0          0
+/badc/cmorph                                     0         0          0        15855          0      0          0          0
+/badc/coapec                                     0        30          0        46261          0      0          0          0
+/badc/cobra                                      0        23          0           37          0      0          0          0
+/badc/constrain                                  0         0          0            0          0      0          5          0
+/badc/cops                                       0         1          0        13340          0      0          0          0
+/badc/cordex                                 84800      7256          0            0          0      0          0          0
+/badc/corral                                   325         4          0       363036          0      0          0          0
+/badc/covex                                      9         0          0            0          0      0          0          0
+/badc/cpdn                                       0         0          0            0          0      0          0          2
+/badc/cru                                      629        50         41        26090      35659      0          0          0
+/badc/cryostat                                   0         0          0           27          0      0          0          0
+/badc/csip                                       6        53          0       264608          0      0          0          0
+/badc/cwave                                      0         0          0        17252          0      0          0          0
+/badc/cwvc                                    2582        88          0       229636          0      0          0          0
+/badc/dabex                                     10         0          0            0          0      0          0          0
+/badc/deposited2017                              0         0          0        59692        373      0          0          0
+/badc/deposited2018                              0         3          2         5555       5957      0          8          0
+/badc/deposited2019                              0         0          0         4597      14775      0          0          0
+/badc/deposited2020                              0         2       8025       596434      24723      0          0          0
+/badc/deposited2021                              0         0          0         2701     409192      0          0          0
+/badc/deposited2022                              2         0         10           54      29419      0          0          0
+/badc/dragon-wex                                 1         0          0            0          0      0          0          0
+/badc/eaquate                                    9         0          0            0          0      0          0          0
+/badc/ecmwf-e40                                  9    242243          0     11303958          0      0          0          0
+/badc/ecmwf-era                                  0       130          0       222493          0      0          0          0
+/badc/ecmwf-era-interim                          0      9491          0      1359655          0      0          0          0
+/badc/ecmwf-era5                                 0         0          0     25890581          0      0          0          0
+/badc/ecmwf-era51                                0         0          0      4234398          0      0          0          0
+/badc/ecmwf-era5t                                0         0          0       341972          0      0          0          0
+/badc/ecmwf-for                                  0         0          0            0          0      0          0          1
+/badc/ecmwf-op                                   0        57          0      3079369          0      0          0          0
+/badc/ecmwf-trj                                 89        61          0        33541          0      0          0          0
+/badc/eiscat                                     0         0          0         8711          0      0          0          0
+/badc/em25                                       1         0          0            0          0      0          0          0
+/badc/env-baseline                               0         0          0          336          0      0          0          0
+/badc/eprofile                                   0  61406722          0       186296          0      0          0          0
+/badc/esa-wv                                     0         4          0            4          0      0          0          0
+/badc/eucleia                                    0      1921          0        24641          0      0          0          0
+/badc/eufar                                    812        80          0           99      17358      0          0          0
+/badc/eumetnet-sandbox                           0         2          0          770          0      0          0          0
+/badc/euroclim500                                0         4          0        17873          0      0          0          0
+/badc/evoflood                                 180         0          0            0          0      0          0          0
+/badc/export                                     2         6          0          279          0      0          0          0
+/badc/eyjafjallajokull                           2        23          0       236575          0      0          0          0
+/badc/faam                                     242      7050          0        69545        646      0          0          0
+/badc/fe-amazon                                  0        42          0            0      18246      0          0          0
+/badc/fennec                                     1         3          0           24          0      0          0          0
+/badc/firetracc                                  0         0          0           36          0      0          0          0
+/badc/fluxex                                     9         0          0            0          0      0          0          0
+/badc/free                                       0         9          0         2282          0      0          0          0
+/badc/fund                                       0         0          0            0          0      0        483          0
+/badc/gauge                                      0         3          0           23          4      0          0          0
+/badc/gerb                                       0        12          0       169256     328915      0          2          0
+/badc/gfdex                                      1         2          0        32864          0      0          0          0
+/badc/glocaem                                  975         0          0        54439          0      0          1          0
+/badc/gome                                       0        47          0        75081          0      0          0          0
+/badc/gpm                                        0         0          0       829998          0      0          0          0
+/badc/hadcm3                               3323703       232          0        45654          0      0          0          0
+/badc/hadcm3-control                             0     66519          0       623413          0      0          0          0
+/badc/hadcm3c                                    1         0          0        27459          0      0          0          0
+/badc/hadgem1                                    0       189          0       117403          0      0          0          0
+/badc/hadgem2ao                                  0         2          0        30039          0      0          0          0
+/badc/hadrm3                                     0        49          0      1598670          0      0          0          0
+/badc/haloe                                      0       217          0        72400          0      0          0          0
+/badc/hi-acc-co2                                 0         0          0           16          0      0          0          0
+/badc/higem                                    523     20170          0       290226          0      0          0          0
+/badc/highresmip-derived                         0         0          0          494          0      0          0          0
+/badc/hirdls                                    22      5527          0       848961          0      0          0          0
+/badc/hitemp                                     0     28765          0            0      28765      0      28661          0
+/badc/hyrex                                      0        65          0        12720          0      0          0          0
+/badc/ice-d                                      0         0          0            0      13342      0          0          0
+/badc/icecaps-ace                                0         0          0         6594          0      0          0          0
+/badc/icepic                                    10         0          0            0          0      0          0          0
+/badc/igp                                        0         0        457          743         53      0          0          0
+/badc/impala                                     0         0          0       126487          0      0          0          0
+/badc/ipcc-ddc                               27461         0          0        54616          0      0          0          0
+/badc/ipcc-ddc-regions                           0         8          0           22          0      0          0          0
+/badc/isamsl0                                    0         0          0         4420          0      0          0          0
+/badc/isamsl2                                    0       271          0         2533          0      0          0          0
+/badc/isamsl3                                    0       171          0        14367          0      0          0          0
+/badc/isb52                                      1       838          0          336          0      0          0          0
+/badc/isccp_d1                                   0        34          0         6033          0      0          0          0
+/badc/isccp_d2                                   0        14          0          214          0      0          0          0
+/badc/islscp2                                    0         5          0         1432          0      0          0          0
+/badc/itop                                       0        12          0        16226          0      0          0          0
+/badc/jaivex                                     1         4          0           47          0      0          0          0
+/badc/jet2000                                    1         2          0          664          0      0          0          0
+/badc/kilimanjaro-climate                        0         1          0            4          0      0          0          0
+/badc/kjolnes-observatory                        0         0          0          143          0      0          0          0
+/badc/land-emiss                                 8         0          0            0          0      0          0          0
+/badc/lims                                       0        11          0         4218          0      0          0          0
+/badc/link                                    6307       207          0      6403114          0      0          0          0
+/badc/mac                                        0         0          0          746         21      0          0          0
+/badc/mamm                                       4         0          0            0          0      0          0          0
+/badc/meteor-radars                              0         0          0        31947       3355      0          0          0
+/badc/meteosat                                   0        13          0       276203          0      0          0          0
+/badc/mgs                                        0       129          0            0        129      0          0          0
+/badc/micromix                                   9         0          0            0          0      0          0          0
+/badc/microscope                                 1         1          0          149       1849      0          0          0
+/badc/mlsl3                                      0       240          0        34134          0      0          0          0
+/badc/moccha                                     0         0         69           62          0      0          0          0
+/badc/mosaic-arctic                              0         0          0            0          0      0          0          0
+/badc/moya                                       0         0          2           26         27      0          0          0
+/badc/msf                                        0         0          0       673898          0      0          0          0
+/badc/msg                                        0       830          0      6221153          0      0          0          0
+/badc/mst                                   139156     23917          1       781564       7457      0          0          0
+/badc/namblex                                    0         7          0         1835          0      0          0          0
+/badc/ncas                                       0         0          0           11          0      0          0          0
+/badc/ncas-bttao                                 1         0          0            0          0      0          0          0
+/badc/ncas-cao                                   1         0          0            0          0      0          0          0
+/badc/ncas-cdao                                  1         0          0            0          0      0          0          0
+/badc/ncas-cvao                                117         0          0            0          0      0          0          0
+/badc/ncas-enflo                                 1         0          0            0          0      0          0          0
+/badc/ncas-iao                                   1         0          0            0          0      0          0          0
+/badc/ncas-long-term                             0         0          0            0          0      0          0          0
+/badc/ncas-longterm-obs                          0         8          8         1663     402031      0          0          0
+/badc/ncas-mobile                            17551         0          0            0     333543      0        596          0
+/badc/ncas-observations                         13         0          0            0          0      0          0          0
+/badc/ncas-wao                                  50         0          0            0          0      0          0          0
+/badc/ndsc                                       0     27265          0       340127          0      0          0          0
+/badc/neon                                       9         0          0            0          0      0          0          0
+/badc/nerc-assim-prog                            0        38          0       100952          0      0          0          0
+/badc/nerc-rm2010                                1         2          0       246843          0      0          0          0
+/badc/ness-aws                                   0         0          0            0          0      0          0          0
+/badc/noaa-20cr-v2                               0       149          0     25764095          0      0          0          0
+/badc/nocs_flux                                  0         5          0          488          0      0          0          0
+/badc/nu-wave                                    9         0          0            0          0      0          0          0
+/badc/ofcap                                      0         2          0            0        195      0          0          0
+/badc/op3                                       38         2          0          229          0      0          0          0
+/badc/openifs_at_home                            0         0          0            0       1969      0          0          0
+/badc/optclim                                    0         0          0       412635          0      0          0          0
+/badc/orchestra                                  0         0          0           88          0      0          0          0
+/badc/osca                                     217         0       1586            0          0      0          0          0
+/badc/penlee                                  9014         0          0           12          0      0          0          0
+/badc/picasso                                    0         0          0            0          0      0          0          0
+/badc/polluted-tropo                             7        14          0         3395          0      0          0          0
+/badc/pose                                       8         0          0            0          0      0          0          0
+/badc/presto                                     0         0          0         5311          0      0          0          0
+/badc/proc-earth-model                           0         2          0           81         35      0          0          0
+/badc/quest                                      0       156          0         5766          0      0          0          0
+/badc/rains                                      0         0          0            0      39729      0          0          0
+/badc/rapid                                   1750        10          0       277116          0      0          0          0
+/badc/rapid-watch                                0         1          0       146039       1881      0          0          0
+/badc/rcemip                                     0         0          0        33594          0      0          0          0
+/badc/rescues                                    0         0          0           32          0      0          0          0
+/badc/rico                                       9         0          0            0          0      0          0          0
+/badc/ronoco                                     1         3          0        23404          0      0          0          0
+/badc/sa-monsoon                                 1         0          0           20        156      0          0          0
+/badc/sage2                                  11759         3          0         1128          0      0          0          0
+/badc/sage3                                      0        18          0       629852          0      0          0          0
+/badc/sambba                                     4         0          0            0          0      0          0          0
+/badc/sams                                       0         0          0            0          0    101          0          0
+/badc/saprise                                    0         0          0        28675          0      0          0          0
+/badc/sg-wex                                     0         0          0            0       5982      0          0          0
+/badc/slimcat                                    0        20          0           26          0      0          0          0
+/badc/smurphs                                    0         0          0          726          0      0          0          0
+/badc/snap                                       0         0          0            0        114      0          0          0
+/badc/snowdon-gnss                               0         1          0          293          0      0          0          0
+/badc/soapex                                     0         2          0           62          0      0          0          0
+/badc/solas                                      2         1          0          568          0      0          0          0
+/badc/sonata                                     0         0          0            3          6      0          0          0
+/badc/specs                                 272804    630250          0      3744836          0      0          0          0
+/badc/srip                                       0         0          0            0     152275      0          0          0
+/badc/stormsrisk                                 5        22          0        45157          0      0          0          0
+/badc/t-rex                                      8         0          0            0          0      0          0          0
+/badc/thaw                                       6         0          0            0          0      0          0          0
+/badc/toms                                   26697       111          0         9494          0      0          0          0
+/badc/trmm                                       0         0          0       252245          0      0          0          0
+/badc/ufam                                       0         3          0          172          0      0          0          0
+/badc/ugamp-o3-climatology                       0         5          0           78          0      0         61          0
+/badc/ujcc                                       0         0          0       258472          0      0          0          0
+/badc/uk-decc-network                            0         0          0          219          0      0          0          0
+/badc/ukcip02                                    0         3          0         6585          0      0          0          0
+/badc/ukcp09                                     0       171          0       388507        674      0          0          0
+/badc/ukcp18                                 16120         0          0       410032          0      0          0          0
+/badc/ukmo-aam                                   0        10          0           34          0      0          0          0
+/badc/ukmo-africa-lam                            0         7          0        71569          0      0          0          0
+/badc/ukmo-assim                             36293        91          0        25518          0      0          0          0
+/badc/ukmo-atdnet                                2         0          0            0          0      0          0          0
+/badc/ukmo-cardington                            0        24          0        15176          0      0       1343          0
+/badc/ukmo-cet                                   0         4          0           96          0      0          0          0
+/badc/ukmo-charts                                0        26          0        26287          0      0          0          0
+/badc/ukmo-clim                                  0         0          0            0          0      0          0          0
+/badc/ukmo-cyclones                              0         0          0            8          0      0          0          0
+/badc/ukmo-gmslp                                 0         4          0          130          0      0          0          0
+/badc/ukmo-gosta                                 0        12          0          618          0      0          0          0
+/badc/ukmo-hadat                                42         7          0           99          0      0          0          0
+/badc/ukmo-hadisst                               0         8          0          338          0      0          0          0
+/badc/ukmo-hadobs                              152       120       6180        99120     157033      0          0          0
+/badc/ukmo-hadrt                                 0         4          0           66          0      0          0          0
+/badc/ukmo-hadsst2                               0         1          0           22          0      0          0          0
+/badc/ukmo-height                                0         2          0          298          0      0          0          0
+/badc/ukmo-lidarnet                         147102         8          0      4422735          0      0          0          0
+/badc/ukmo-metdb                             18244        14          0        85088          0      0          0          0
+/badc/ukmo-midas                                 0       608          0         3105          0      0          0          0
+/badc/ukmo-midas-open                            0        92          0            0    1330654      0          0          0
+/badc/ukmo-mrf                                   0        88          0         1950          0      0          0          0
+/badc/ukmo-mslp                                  0         2          0          289          0      0          0          0
+/badc/ukmo-nimrod                             2304     99793          0       169959          0      0          0          0
+/badc/ukmo-nwp                                   0        20          2      8291905          0      0          0          0
+/badc/ukmo-rad                                   0         0          0       482894          0      0          0          0
+/badc/ukmo-rad-hires                           119       232          0       205739          0      0          0          0
+/badc/ukmo-sferics                               5         0          0            0          0      0          0          0
+/badc/ukmo-surface                           35759         8          0       319387          0      0          0          0
+/badc/ukmo-synop                               185         2          0          915          0      0          0          0
+/badc/ukmo-tovs                                  0        11          0         3050          0      0          0          0
+/badc/ukmo-um                                    0         0          0            0          0      0          0          7
+/badc/ukmo-wind-prof                             0        23          0        16098          0      0          0          0
+/badc/urgent                                     0        67          0          308          0      0          0          0
+/badc/utls                                       3        88          0        34627          0      0          0          0
+/badc/vacar                                      0         0          0            0          0      0          9          0
+/badc/virtem                                     0       228          0           88          0      0          0          0
+/badc/visurb                                     7         0          0            0          0      0          0          0
+/badc/vocals                                     6         0          0            0          0      0          0          0
+/badc/volcan-eesm                                0         0          0            0          2      0          0          0
+/badc/wcrp-ccmi                                512         0          0       368537          0      0          0          0
+/badc/weather_at_home                            0         0          0            0     738275      0          0          0
+/badc/weybourne                                  0         3         24        84939          0      0          5          0
+/badc/zwamps                                     0         0          0            2          0      0          0          0
+/bodc/BAS210037                                  0         0          0            0      72041      0          0          0
+/bodc/BAS210038                                  0         0          0            0      36021      0          0          0
+/bodc/BAS210039                                  0         0          0            0      66601      0          0          0
+/bodc/CSC210177                                  0         0          0            0      39947      0          0          0
+/bodc/SOC210128                                  0         0          0            0       3001      0          0          0
+/bodc/SOC210129                                  0         0          0            0       3397      0          0          0
+/bodc/SOC210130                                  0         0          0            0       3174      0          0          0
+/bodc/SOC220065                                  0         0          0            0      37972      0          0          0
+/bodc/SOC220091                                  0         0          2            0          0      0          0          0
+/bodc/UOX220077                                  0         0          0          169          0      0          0          0
+/bodc/UOX220126                                  0         0          0            0          0      0          0          0
+/bodc/UOX220127                                  0         0          0            0          0      0          0          0
+/bodc/USO220011                                  0         0          0       225640          0      0          0          0
+/bodc/acoustic                                   1         0          0            0          0      0          0          0
+/bodc/rvs200182                                223         0          0            0          0      0          0          0
+/edc                                             0     67756          0            0          0      0          0          0
+/neodc/aast_leicester                        11819         0          0            0          0      0          0          0
+/neodc/aatsr_lst                                 2         0          0            0          0      0          0          0
+/neodc/aatsr_multimission                  1550194    258639          0      3085739          0      0     425304          0
+/neodc/arc                                       0     61449          0       124181          0      0          0          0
+/neodc/ard4ceos                                  0         0          0          426          0      0          0          0
+/neodc/arsf                                 922372        24        110       181659      33414      0       7959          0
+/neodc/atsrubt                                   0         0          0            0          0      0    5803528          0
+/neodc/avhrr3_metop_a                            0        28          0        75157          0      0          0          0
+/neodc/avhrr3_metop_b                            0        11          0        47183          0      0          0          0
+/neodc/avhrr3_metop_c                            0         0          0            0          0      0      14491          0
+/neodc/avhrr_dundee                              0         0          0       235543          0      0          0          0
+/neodc/avhrr_fasir                               0         0          0          217          0      0          0          0
+/neodc/avhrr_gac                                 0        45          0       747080          0      0          0          0
+/neodc/baci_ssv                                  0         0          0            0       2988      0          1          0
+/neodc/bicep                                     0         0          0            0       1923      0          0          0
+/neodc/c3s_sst                                5701         0          0            0          0      0       4372          0
+/neodc/caliop                                    0         0          0       843536          0      0          0          0
+/neodc/casix                                     3         4          0          147          0      0          0          0
+/neodc/comet                                     0         1    5804502            0        128      0          0          0
+/neodc/comet-cgps                                0         0          0        18674          0      0          0          0
+/neodc/cryosat_2                                 0         0          0            0          0      0          0          0
+/neodc/czcs                                      0         0          0         4431          0      0          0          0
+/neodc/dem                                       0         0          0            0        338      0          0          0
+/neodc/digital_elevation_models                  0         0          0            0          0      0          0          0
+/neodc/esa_globsnow                              0         5          0        25609          0      0          0          0
+/neodc/esacci                              4275734       322     534080      1809373    4808037      0      80430         30
+/neodc/esasar                                    0         0          0          378          0      0          0          0
+/neodc/eustace                                   1         3          0          169    6668618      0          0          0
+/neodc/fiduceo                                   0         0          0      2025759     428992      0          0          0
+/neodc/fire_emissions                            0         0          0            0         50      0          0          0
+/neodc/glas_veg_height                           0         1          0            3          0      0          0          0
+/neodc/global_gas_flaring                        0         0          0            0        519      0          0          0
+/neodc/globalbedo_broadband_albedo           56224         0          0            0          0      0          0          0
+/neodc/globalbedo_broadband_brdf                 0         0     506093            0          0      0          0          0
+/neodc/globalbedo_modis_spectral_priors          1         0          0            0          0      0          0          0
+/neodc/globolakes                                0         1          0            0       8546      0          0          0
+/neodc/gome2_metop_a                             0       494          0        88729          0      0          0          0
+/neodc/gome2_metop_b                             0         8          0        32561          0      0          0          0
+/neodc/gome2_metop_c                           399         0          0            0          0      0          0          0
+/neodc/gosat                                     0         0          0            0       4532      0          0          0
+/neodc/hycristal                                 0         0          0            0          9      0          0          0
+/neodc/iasi_ch4_ral                              0         0          0            0    1240614      0          0          0
+/neodc/iasi_metop_a                              0        37          0       185528          0      0          0          0
+/neodc/iasi_metop_b                              0         7          0        75689          0      0          0          0
+/neodc/iasi_metop_c                              0         0          0        12820          0      0          0          0
+/neodc/iasi_so2_oxford                           0         0          0         2641          0      0          0          0
+/neodc/isar                                      0         0          0         2964          0      0          0          0
+/neodc/landmap                                  33    599252          0      2895370          0      0        412          0
+/neodc/landsat45tm                               0         0          0        10815          0      0          0          0
+/neodc/landsat5                                  0         0          0        25647          0      0          0          0
+/neodc/landsat7etm                               0         0          0        39595          0      0          0          0
+/neodc/landsat8                                  0         0          0        84077          0      0          0          0
+/neodc/lsasaf                                    0         0     141584            0          0      0          0          0
+/neodc/meris                                 82589        11          0        40550          0      0      51872          0
+/neodc/metop_ims_ral                             0         0          0            0     741201      0          0          0
+/neodc/mipas                                     0        59          0       144786          0      0          0          0
+/neodc/mipas-oxford                           2545         0          0         4629          0      0          0          0
+/neodc/mipas_clouds                              0         0          0         2268          0      0          0          0
+/neodc/misr                                      0         0          0       292029          0      0          0          0
+/neodc/modis                                     0        68          0     38903828          0      0          0          0
+/neodc/mtci                                      0         2          0         3289          0      0          0          0
+/neodc/ncaveo_field                              3         3          0         1362          0      0          0          0
+/neodc/ncaveo_lcm2000                           36        19          0           95          0      0          0          0
+/neodc/nceo-carbon                               0         2          0          274          0      0          0          0
+/neodc/nceo-cryosphere                           0         2          0           82          0      0          0          0
+/neodc/nceo_ard                            6875954         0          0            0          0      0          0          0
+/neodc/nceo_biomass_maps                        18         0          6           15          0      0          0          0
+/neodc/nextmap                                   0         0          0       189656          0      0          0          0
+/neodc/obs4MIPs                                  0         0          0            0         14      0          0          0
+/neodc/ocean_reanalysis                          0         0          0            0         31      0          0          0
+/neodc/oceanic_poc                               0         0          0            2        543      0          0          0
+/neodc/oltraj                                    0         0          0           31      24080      0          0          0
+/neodc/piccolo                                   1         0          0            0          0      0          0          0
+/neodc/qa4ecv                               352344         0     103987            0      39296      0      16085          0
+/neodc/ral_ims_ext                               0         0          0            0      28615      0          0          0
+/neodc/sciamachy                                 0        12          0        94982          0      0          0          0
+/neodc/seawifs                                   0         0          0        28012          0      0          0          0
+/neodc/sentinel1a                                0       433     301267      9923029          0      0          6          0
+/neodc/sentinel1b                                0       266     245794      5354544          0      0          0          0
+/neodc/sentinel2a                                0       114          0      7621677          0      0          0          0
+/neodc/sentinel2b                                0        67          0      4068586          0      0          0          0
+/neodc/sentinel3a                                0       237     241699      7487003          0      0        921          0
+/neodc/sentinel3b                                0       130          0      4324439          0      0          0          0
+/neodc/sentinel5p                                0        15     460427       628657          0      0      94627          0
+/neodc/sentinel_ard                              0         0          6       369856          0      0          0          0
+/neodc/seviri_frp                                0         2          0          363          0      0          0          0
+/neodc/shac2000                                  0         0          0          108          0      0          0          0
+/neodc/sister                                    0         0          0         2816          0      0          0          0
+/neodc/slstr_calibration                   1035561         0          0            0          0      0          0          0
+/neodc/spei_africa                               0         0          0            0         50      0          0          0
+/neodc/surface_velocities_afar_rift              0         0          0            0          2      0          0          0
+/neodc/tls                                  143595         0      62866            0      11145      0          0          0
+/neodc/tomcat_ozone                              1         0          0            0          0      0          0          0
+/neodc/uol_gosat_sif                             0         0          0            0       4031      0          0          0
+/ngdc                                            0    142073          0            0          0      0          0          0
+/pdc                                             0     12998          0            0          0      0          0          0
+/sparc                                           0   1323233          0            0          0      0          0          0
+TOP                                        -114710         0          0            0          0      0          0          0

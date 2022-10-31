@@ -1,4 +1,5 @@
 
+from email.policy import default
 import os
 from typing import DefaultDict
 from collections import OrderedDict
@@ -36,26 +37,33 @@ class AnnotatedDir:
         return self.directory.startswith(other + "/") 
 
     def __str__(self):
-        return f"{self.directory}|{self.annotation}|{self.vol}|{self.number}"    
+        return f"{self.directory}|{self.annotation}"    
 
     __repr__ = __str__
 
 
 class AnnotatedDirs:
 
-    def __init__(self, ignore_file) -> None:
+    def __init__(self, cat_file, ignore_file, missing_file=None) -> None:
         self.ignore_file = ignore_file
+        self.cat_file = cat_file
+        self.missing_file = missing_file
         self.top_vol, self.top_number, self.total_vol, self.total_number = 0, 0, 0, 0
         self.ad = {}
+      
+        if missing_file is not None:
+            self.read_path_list(missing_file, "missing")
+        self.read_path_list(ignore_file, "ignore")
 
-        with open(self.ignore_file) as fh:
+        for path, annotation in get_catalogue_record_paths(cat_file).items():
+            self.ad[path] = AnnotatedDir(path, annotation)
+
+    def read_path_list(self, filename, annotation):
+        with open(filename) as fh:
             for line in fh.readlines():
                 ignore_dir = line.strip().rstrip('/')
-                self.ad[ignore_dir] = AnnotatedDir(ignore_dir, "ignore")
+                self.ad[ignore_dir] = AnnotatedDir(ignore_dir, annotation)
 
-        for path, annotation in get_catalogue_record_paths().items():
-            self.ad[path] = AnnotatedDir(path, annotation)
-        
     def has_subdirs(self, path):
         for ad_path in self.ad:
             if ad_path.startswith(path + "/"): 
@@ -100,6 +108,9 @@ class AnnotatedDirs:
             collections.add(collection)
             vol_dict[(annotation, collection)] += annotateddir.vol
             number_dict[(annotation, collection)] += annotateddir.number
+        vol_dict[("missing", "TOP")] = self.top_vol
+        number_dict[("missing", "TOP")] = self.top_number
+        collections.add("TOP")
 
         collections = list(collections)
         collections.sort()
@@ -170,17 +181,21 @@ def printtable(primary, primary_label, primary_total, secondary, secondary_label
         f"Cum. percent by {primary_label}",  f"percent by {secondary_label}", f"Cum. percent by {secondary_label}"]))
 
 
-
-@click.command()
-@click.argument("filename", nargs=1)
-def main(filename):
-    ad = AnnotatedDirs(filename) 
-    
-    ad.walk_the_tree("/")
+@click.command("catalogue_coverage", context_settings={'show_default': True})
+@click.option("--cat", type=click.Path(), 
+              help="File with a json encoded dict of paths and record publication state.", 
+              default="catalogue_record_paths_cache.json")
+@click.option("--ignore", type=click.Path(), 
+              help="File containing list of paths to ignore.", 
+              default="ignore.txt")
+@click.option("--missing", type=click.Path(), 
+              help="Output file for missing paths.", 
+              default="missing.txt")
+def catalogue_coverage(cat, ignore, missing):
+    ad = AnnotatedDirs(cat, ignore, missing_file=missing) 
     ad.maketop()
     
     vols, numbers, number_list, header = ad.summary2()
-    ad.save_missing(filename + ".out")
 
     printtable(numbers, "Number", ad.total_number, vols, "Volume", ad.total_vol)
     printtable(vols, "Volume", ad.total_vol, numbers, "Number", ad.total_number)
@@ -200,3 +215,21 @@ def main(filename):
 
     print()
     print(tabulate(number_list, headers=header))
+
+
+@click.command("find_missing", context_settings={'show_default': True})
+@click.option("--cat", type=click.Path(), 
+              help="File with a json encoded dict of paths and record publication state.", 
+              default="catalogue_record_paths_cache.json")
+@click.option("--ignore", type=click.Path(), 
+              help="File containing list of paths to ignore.", 
+              default="ignore.txt")
+@click.option("--missing", type=click.Path(), 
+              help="Output file for missing paths.", 
+              default="missing.txt")
+def find_missing(cat, ignore, missing):
+    ad = AnnotatedDirs(cat, ignore) 
+    ad.walk_the_tree("/")
+    ad.save_missing(missing)
+
+ 

@@ -41,7 +41,8 @@ setup(
 
     entry_points={
         'console_scripts': [
-            'catalogue_coverage=cat_complete.completeness_finder:main',
+            'catalogue_coverage=cat_complete.completeness_finder:catalogue_coverage',
+            'find_missing=cat_complete.completeness_finder:find_missing',
         ],
     },
 )
