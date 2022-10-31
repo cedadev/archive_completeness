@@ -95,6 +95,28 @@ class AnnotatedDirs:
         number_dict = OrderedDict(sorted(number_dict.items(), key=lambda x: x[1], reverse=True))
         return vol_dict, number_dict
 
+    def summary3(self):
+        vol_dict = DefaultDict(int)
+        number_dict = DefaultDict(int)
+
+        header = ["Annotation", "Number", "Number %", "Volume", "Volume %"]
+
+        for directory in self.ad:
+            annotateddir = self.ad[directory]
+            annotation = annotateddir.annotation
+            number_dict[annotation] += annotateddir.number
+            vol_dict[annotation] += annotateddir.vol
+            
+        table = []    
+        for annotation in number_dict:
+            number = number_dict[annotation]
+            vol = vol_dict[annotation]
+            table.append([annotation, number, 100*number/self.total_number, vol, 100*vol/self.total_vol])
+        table.append(["TOP", self.top_number, 100*self.top_number/self.total_number, 
+                      self.top_vol, 100*self.top_vol/self.total_vol])
+
+        print(tabulate(table, headers=header))
+
     def summary2(self):
         vol_dict = DefaultDict(int)
         number_dict = DefaultDict(int)
@@ -215,6 +237,7 @@ def catalogue_coverage(cat, ignore, missing):
 
     print()
     print(tabulate(number_list, headers=header))
+    ad.summary3()
 
 
 @click.command("find_missing", context_settings={'show_default': True})
