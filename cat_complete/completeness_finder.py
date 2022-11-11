@@ -10,6 +10,8 @@ from .get_fbi_sizes import get_size
 from .get_catalogue_records import get_catalogue_record_paths
 # report by number, vol, collections
 
+ok_annotations = ["ignore", "citable", "published", "removed", "old"]
+
 class AnnotatedDir:
     def __init__(self, directory, annotation) -> None:
         self.directory = directory
@@ -107,6 +109,24 @@ class AnnotatedDirs:
             number_dict[annotation] += annotateddir.number
             vol_dict[annotation] += annotateddir.vol
             
+        table = []  
+        ok_number, ok_vol, not_ok_number, not_ok_vol = 0, 0, 0, 0
+        ok_states = ["ignore", "published", "removed","citable", "old"]
+        for annotation in number_dict:
+            if annotation in ok_states:
+                ok_number += number_dict[annotation]
+                ok_vol += vol_dict[annotation]
+            else:
+                not_ok_number += number_dict[annotation]
+                not_ok_vol += vol_dict[annotation]
+        not_ok_number += self.top_number
+        not_ok_vol += self.top_vol
+
+        table.append(["OK states", ok_number, 100*ok_number/self.total_number, ok_vol, 100*ok_vol/self.total_vol])
+        table.append(["Not OK states", not_ok_number, 100*not_ok_number/self.total_number, not_ok_vol, 100*not_ok_vol/self.total_vol])
+        print(tabulate(table, headers=header))
+        print()
+
         table = []    
         for annotation in number_dict:
             number = number_dict[annotation]
@@ -196,7 +216,7 @@ def printtable(primary, primary_label, primary_total, secondary, secondary_label
         percent_seco = 100 * seco_value/secondary_total
         cum_percent_prim += percent_prim
         cum_percent_seco += percent_seco
-        if percent_prim < 0.00001:
+        if percent_prim < 0.1:
             continue
         table.append([annotation, collection, percent_prim, cum_percent_prim, percent_seco, cum_percent_seco])
     print(tabulate(table[0:400], headers=["Annotation", "Collection", f"percent by {primary_label}", 
@@ -214,6 +234,7 @@ def printtable(primary, primary_label, primary_total, secondary, secondary_label
               help="Output file for missing paths.", 
               default="missing.txt")
 def catalogue_coverage(cat, ignore, missing):
+    """Use the missing, ignored and catalogue records to report on coverage."""
     ad = AnnotatedDirs(cat, ignore, missing_file=missing) 
     ad.maketop()
     
@@ -222,21 +243,9 @@ def catalogue_coverage(cat, ignore, missing):
     printtable(numbers, "Number", ad.total_number, vols, "Volume", ad.total_vol)
     printtable(vols, "Volume", ad.total_vol, numbers, "Number", ad.total_number)
 
-    table = []
+    #print()
+    #print(tabulate(number_list, headers=header))
     print()
-    print("Missing  by Vol")
-    for annotation in vols:
-        number = numbers[annotation]
-        vol = vols[annotation]
-        table.append([annotation, number, 100*number/ad.total_number, vol, 100*vol/ad.total_vol])
-    print(tabulate(table[0:100], headers=["Annotation", "number", "percent by number", "volume", "percent by Volume"]))
-
-    vol = ad.top_vol
-    number = ad.top_number
-    print( number, 100*number/ad.total_number, vol, 100*vol/ad.total_vol)
-
-    print()
-    print(tabulate(number_list, headers=header))
     ad.summary3()
 
 
@@ -251,6 +260,7 @@ def catalogue_coverage(cat, ignore, missing):
               help="Output file for missing paths.", 
               default="missing.txt")
 def find_missing(cat, ignore, missing):
+    """Find the missing directories that need a catalogue record."""
     ad = AnnotatedDirs(cat, ignore) 
     ad.walk_the_tree("/")
     ad.save_missing(missing)

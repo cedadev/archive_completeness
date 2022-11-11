@@ -12,7 +12,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='archive_completeness',
-    version='0.0.1',
+    version='0.0.2',
     description='find catalogue coverage in FBI',
     long_description=long_description,
 
