@@ -460,6 +460,12 @@
 /neodc/esacci/soil_moisture/metadata
 /neodc/esacci/sst/doc
 /neodc/esacci/sst/metadata
+/neodc/esacci/ocean_colour/data/v1-release/geographic/png
+/neodc/esacci/ocean_colour/data/v2-release/geographic/png
+/neodc/esacci/ocean_colour/data/v3.1-release/geographic/png
+/neodc/esacci/ocean_colour/data/v4.2-release/documentation
+/neodc/esacci/ocean_colour/data/v4.2-release/geographic/png
+/neodc/esacci/ocean_colour/data/v5.0-release/geographic/png
 /neodc/eustace/metadata
 /neodc/glas_veg_height/metadata
 /neodc/globolakes/docs
