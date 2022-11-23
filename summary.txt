@@ -2,47 +2,43 @@
 sorted by number
 Annotation    Collection                          percent by Number    Cum. percent by Number    percent by Volume    Cum. percent by Volume
 ------------  --------------------------------  -------------------  ------------------------  -------------------  ------------------------
-missing       /neodc/nceo_ard                              1.99485                    1.99485            0.219744                   0.219744
-preview       /neodc/comet                                 1.69028                    3.68512            0.190171                   0.409915
-working       /neodc/atsrubt                               1.68372                    5.36884            0.102503                   0.512418
-missing       /neodc/esacci                                1.24047                    6.60931            0.0655997                  0.578017
-missing       /badc/hadcm3                                 0.96427                    7.57358            0.0412244                  0.619242
-missing       /badc/cmip6                                  0.780077                   8.35366            4.36529                    4.98453
-missing       /neodc/aatsr_multimission                    0.449741                   8.8034             0.355514                   5.34005
-missing       /neodc/slstr_calibration                     0.300436                   9.10384            0.0396442                  5.37969
-missing       /neodc/arsf                                  0.267598                   9.37143            0.421724                   5.80142
-preview       /neodc/esacci                                0.154947                   9.52638            0.637178                   6.43859
-preview       /neodc/globalbedo_broadband_brdf             0.146827                   9.67321            0.228077                   6.66667
-working       /neodc/aatsr_multimission                    0.123389                   9.7966             0.0957173                  6.76239
-missing       /neodc/qa4ecv                                0.102222                   9.89882            0.0634393                  6.82583
+working       /neodc/atsrubt                               1.68012                    1.68012            0.102139                   0.102139
+missing       /badc/hadcm3                                 0.962214                   2.64234            0.041078                   0.143217
+missing       /neodc/aatsr_multimission                    0.448782                   3.09112            0.354251                   0.497468
+missing       /neodc/slstr_calibration                     0.299795                   3.39091            0.0395034                  0.536971
+missing       /neodc/arsf                                  0.267027                   3.65794            0.420226                   0.957197
+missing       /badc/cmip6                                  0.157292                   3.81523            1.16351                    2.1207
+preview       /neodc/esacci                                0.154616                   3.96985            0.634915                   2.75562
+preview       /neodc/globalbedo_broadband_brdf             0.146514                   4.11636            0.227267                   2.98289
+working       /neodc/aatsr_multimission                    0.123126                   4.23949            0.0953774                  3.07826
+missing       /neodc/qa4ecv                                0.102004                   4.34149            0.063214                   3.14148
 
 sorted by number
 Annotation    Collection                          percent by Volume    Cum. percent by Volume    percent by Number    Cum. percent by Number
 ------------  --------------------------------  -------------------  ------------------------  -------------------  ------------------------
-missing       /badc/cmip6                                  4.36529                    4.36529            0.780077                   0.780077
-preview       /neodc/esacci                                0.637178                   5.00247            0.154947                   0.935024
-missing       /neodc/arsf                                  0.421724                   5.42419            0.267598                   1.20262
-missing       /neodc/aatsr_multimission                    0.355514                   5.77971            0.449741                   1.65236
-preview       /neodc/globalbedo_broadband_brdf             0.228077                   6.00778            0.146827                   1.79919
-missing       /neodc/nceo_ard                              0.219744                   6.22753            1.99485                    3.79404
-preview       /neodc/comet                                 0.190171                   6.4177             1.69028                    5.48431
-missing       /badc/cordex                                 0.175192                   6.59289            0.0246021                  5.50892
-missing       /neodc/meris                                 0.127123                   6.72001            0.0239607                  5.53288
-working       /neodc/atsrubt                               0.102503                   6.82252            1.68372                    7.21659
+missing       /badc/cmip6                                  1.16351                    1.16351            0.157292                   0.157292
+preview       /neodc/esacci                                0.634915                   1.79842            0.154616                   0.311908
+missing       /neodc/arsf                                  0.420226                   2.21865            0.267027                   0.578935
+missing       /neodc/aatsr_multimission                    0.354251                   2.5729             0.448782                   1.02772
+preview       /neodc/globalbedo_broadband_brdf             0.227267                   2.80017            0.146514                   1.17423
+missing       /badc/cordex                                 0.17457                    2.97473            0.0245496                  1.19878
+missing       /neodc/meris                                 0.126672                   3.10141            0.0239096                  1.22269
+working       /neodc/atsrubt                               0.102139                   3.20355            1.68012                    2.90281
 
-Annotation        Number    Number %       Volume    Volume %
--------------  ---------  ----------  -----------  ----------
-OK states      307723224     89.2764  2.25215e+16    92.2175
-Not OK states   36962592     10.7236  1.90067e+15     7.78255
+Annotation        Number    Number %    Volume (TB)    Volume %
+-------------  ---------  ----------  -------------  ----------
+OK states      327681235    94.8639       23515        95.9434
+Not OK states   17741299     5.13612        994.234     4.05657
 
-Annotation       Number      Number %           Volume      Volume %
-------------  ---------  ------------  ---------------  ------------
-missing        22399504   6.49853          1.49263e+15   6.11177
-ignore         65277443  18.9382           1.50198e+14   0.615007
-published     222525901  64.5591           2.19311e+16  89.8001
-removed              40   1.16048e-05  37398             1.53131e-10
-preview         8096107   2.34884          3.29508e+14   1.34921
-working         6439805   1.86831          7.75818e+13   0.317669
-citable        19919739   5.7791           4.40177e+14   1.80237
-old                 101   2.9302e-05       6.6847e+07    2.73714e-07
-TOP               27176   0.00788428       9.50849e+11   0.00389338
+Annotation         Number      Number %     Volume (TB)      Volume %
+--------------  ---------  ------------  --------------  ------------
+missing           9147778   2.64829        648.311        2.64517
+ignore_pattern    1503885   0.435375         0.0854849    0.000348786
+ignore           74874646  21.6762         219.765        0.89666
+published       231341849  66.9736       22854           93.2465
+removed                40   1.158e-05        3.7398e-08   1.52587e-10
+preview           2152948   0.62328        267.358        1.09084
+working           6439210   1.86415         77.5828       0.316545
+citable          19960714   5.77864        441.15         1.79993
+old                   101   2.92396e-05      6.6847e-05   2.72742e-07
+TOP                  1363   0.000394589      0.982893     0.0040103

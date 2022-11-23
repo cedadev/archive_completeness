@@ -4,13 +4,14 @@ import os
 from typing import DefaultDict
 from collections import OrderedDict
 import click
+import re
 from fbi_core import fbi_listdir
 from tabulate import tabulate
 from .get_fbi_sizes import get_size
 from .get_catalogue_records import get_catalogue_record_paths
 # report by number, vol, collections
 
-ok_annotations = ["ignore", "citable", "published", "removed", "old"]
+ok_annotations = ["ignore", "ignore_pattern", "citable", "published", "removed", "old"]
 
 class AnnotatedDir:
     def __init__(self, directory, annotation) -> None:
@@ -46,19 +47,34 @@ class AnnotatedDir:
 
 class AnnotatedDirs:
 
-    def __init__(self, cat_file, ignore_file, missing_file=None) -> None:
+    def __init__(self, cat_file, ignore_file, ignore_patterns_file, 
+                 missing_file=None, ignore_pattern_output_file=None) -> None:
         self.ignore_file = ignore_file
+        self.ignore_patterns_file = ignore_patterns_file
+        self.ignore_patterns = []
+        self.read_ignore_patterns_file()
         self.cat_file = cat_file
         self.missing_file = missing_file
+        self.ignore_pattern_output_file = ignore_pattern_output_file
         self.top_vol, self.top_number, self.total_vol, self.total_number = 0, 0, 0, 0
         self.ad = {}
       
         if missing_file is not None:
             self.read_path_list(missing_file, "missing")
+        if ignore_pattern_output_file is not None:
+            self.read_path_list(ignore_pattern_output_file, "ignore_pattern")
         self.read_path_list(ignore_file, "ignore")
 
         for path, annotation in get_catalogue_record_paths(cat_file).items():
             self.ad[path] = AnnotatedDir(path, annotation)
+
+    def read_ignore_patterns_file(self):
+        with open(self.ignore_patterns_file) as fh:
+            for line in fh.readlines():
+                pattern = line.strip()
+                if pattern == "": 
+                    continue
+                self.ignore_patterns.append(re.compile(pattern))
 
     def read_path_list(self, filename, annotation):
         with open(filename) as fh:
@@ -72,18 +88,42 @@ class AnnotatedDirs:
                 return True
         return False
 
+    def in_ignore_patterns(self, path):
+        for pattern in self.ignore_patterns:
+            if pattern.search(path):
+                return True
+        return False
+
     def find_annotation(self, path):
         if path in self.ad:
             return self.ad[path].annotation
+        elif self.in_ignore_patterns(path):
+            self.ad[path] = AnnotatedDir(path, "ignore_pattern")
+            return "ignore_pattern"
         elif self.has_subdirs(path):
             return None
         else:
-            return "MISSING"
+            self.ad[path] = AnnotatedDir(path, "missing")
+            return "missing"
 
-    def save_missing(self, filename):
-        with open(filename, "w") as fh:
+    def walk_the_tree(self, directory: str):
+        subdir_records = fbi_listdir(directory, dirs_only=True)
+        for subdir_record in subdir_records:
+            subdir = subdir_record["path"]
+            annotation = self.find_annotation(subdir)
+            if annotation is None:   
+                self.walk_the_tree(subdir)  
+            else:
+                print(subdir, annotation)
+
+    def save_output(self, ignore_pattern_output_file, missing_file):
+        with open(missing_file, "w") as fh:
             for annotateddir  in self.ad:
                 if self.ad[annotateddir].annotation == "missing":
+                    fh.write(f"{annotateddir}\n")
+        with open(ignore_pattern_output_file, "w") as fh:
+            for annotateddir  in self.ad:
+                if self.ad[annotateddir].annotation == "ignore_pattern":
                     fh.write(f"{annotateddir}\n")
 
     def summary(self):
@@ -101,7 +141,7 @@ class AnnotatedDirs:
         vol_dict = DefaultDict(int)
         number_dict = DefaultDict(int)
 
-        header = ["Annotation", "Number", "Number %", "Volume", "Volume %"]
+        header = ["Annotation", "Number", "Number %", "Volume (TB)", "Volume %"]
 
         for directory in self.ad:
             annotateddir = self.ad[directory]
@@ -111,9 +151,8 @@ class AnnotatedDirs:
             
         table = []  
         ok_number, ok_vol, not_ok_number, not_ok_vol = 0, 0, 0, 0
-        ok_states = ["ignore", "published", "removed","citable", "old"]
         for annotation in number_dict:
-            if annotation in ok_states:
+            if annotation in ok_annotations:
                 ok_number += number_dict[annotation]
                 ok_vol += vol_dict[annotation]
             else:
@@ -122,8 +161,8 @@ class AnnotatedDirs:
         not_ok_number += self.top_number
         not_ok_vol += self.top_vol
 
-        table.append(["OK states", ok_number, 100*ok_number/self.total_number, ok_vol, 100*ok_vol/self.total_vol])
-        table.append(["Not OK states", not_ok_number, 100*not_ok_number/self.total_number, not_ok_vol, 100*not_ok_vol/self.total_vol])
+        table.append(["OK states", ok_number, 100*ok_number/self.total_number, ok_vol* 1e-12, 100*ok_vol/self.total_vol])
+        table.append(["Not OK states", not_ok_number, 100*not_ok_number/self.total_number, not_ok_vol* 1e-12, 100*not_ok_vol/self.total_vol])
         print(tabulate(table, headers=header))
         print()
 
@@ -131,9 +170,9 @@ class AnnotatedDirs:
         for annotation in number_dict:
             number = number_dict[annotation]
             vol = vol_dict[annotation]
-            table.append([annotation, number, 100*number/self.total_number, vol, 100*vol/self.total_vol])
+            table.append([annotation, number, 100*number/self.total_number, vol* 1e-12, 100*vol/self.total_vol])
         table.append(["TOP", self.top_number, 100*self.top_number/self.total_number, 
-                      self.top_vol, 100*self.top_vol/self.total_vol])
+                      self.top_vol* 1e-12, 100*self.top_vol/self.total_vol])
 
         print(tabulate(table, headers=header))
 
@@ -189,17 +228,6 @@ class AnnotatedDirs:
     def __str__(self):
         return f"{self.top_vol} {self.top_number}\n" + str(self.ad)
 
-    def walk_the_tree(self, directory: str):
-        subdir_records = fbi_listdir(directory, dirs_only=True)
-        for subdir_record in subdir_records:
-            subdir = subdir_record["path"]
-            annotation = self.find_annotation(subdir)
-            if annotation is None:   
-                self.walk_the_tree(subdir)  
-            else:
-                print(subdir, annotation)
-                if annotation == "MISSING":
-                    self.ad[subdir] = AnnotatedDir(subdir, "missing")
                     
 
 def printtable(primary, primary_label, primary_total, secondary, secondary_label, secondary_total):
@@ -208,7 +236,7 @@ def printtable(primary, primary_label, primary_total, secondary, secondary_label
     print("sorted by number")
     cum_percent_prim, cum_percent_seco = 0, 0
     for annotation, collection in primary:
-        if annotation in ("published", "removed", "citable", "old", "ignore"):
+        if annotation in ok_annotations:
             continue
         prim_value = primary[(annotation, collection)]
         seco_value = secondary[(annotation, collection)]
@@ -216,7 +244,7 @@ def printtable(primary, primary_label, primary_total, secondary, secondary_label
         percent_seco = 100 * seco_value/secondary_total
         cum_percent_prim += percent_prim
         cum_percent_seco += percent_seco
-        if percent_prim < 0.1:
+        if percent_prim < 0.03:
             continue
         table.append([annotation, collection, percent_prim, cum_percent_prim, percent_seco, cum_percent_seco])
     print(tabulate(table[0:400], headers=["Annotation", "Collection", f"percent by {primary_label}", 
@@ -230,12 +258,18 @@ def printtable(primary, primary_label, primary_total, secondary, secondary_label
 @click.option("--ignore", type=click.Path(), 
               help="File containing list of paths to ignore.", 
               default="ignore.txt")
+@click.option("--ignore_pat", type=click.Path(), 
+              help="File containing list of regular expressions for paths to ignore.", 
+              default="ignore_pat.txt")
+@click.option("--ignore_pat_output", type=click.Path(), 
+              help="File containing list of regular expressions for paths to ignore.", 
+              default="ignore_pat_output.txt")
 @click.option("--missing", type=click.Path(), 
               help="Output file for missing paths.", 
               default="missing.txt")
-def catalogue_coverage(cat, ignore, missing):
+def catalogue_coverage(cat, ignore, ignore_pat, ignore_pat_output, missing):
     """Use the missing, ignored and catalogue records to report on coverage."""
-    ad = AnnotatedDirs(cat, ignore, missing_file=missing) 
+    ad = AnnotatedDirs(cat, ignore, ignore_pat, missing_file=missing, ignore_pattern_output_file=ignore_pat_output) 
     ad.maketop()
     
     vols, numbers, number_list, header = ad.summary2()
@@ -256,13 +290,19 @@ def catalogue_coverage(cat, ignore, missing):
 @click.option("--ignore", type=click.Path(), 
               help="File containing list of paths to ignore.", 
               default="ignore.txt")
+@click.option("--ignore_pat", type=click.Path(), 
+              help="File containing list of regular expressions for paths to ignore.", 
+              default="ignore_pat.txt")
+@click.option("--ignore_pat_output", type=click.Path(), 
+              help="File containing list of regular expressions for paths to ignore.", 
+              default="ignore_pat_output.txt")
 @click.option("--missing", type=click.Path(), 
               help="Output file for missing paths.", 
               default="missing.txt")
-def find_missing(cat, ignore, missing):
+def find_missing(cat, ignore, ignore_pat, ignore_pat_output, missing):
     """Find the missing directories that need a catalogue record."""
-    ad = AnnotatedDirs(cat, ignore) 
+    ad = AnnotatedDirs(cat, ignore, ignore_pat) 
     ad.walk_the_tree("/")
-    ad.save_missing(missing)
+    ad.save_output(ignore_pat_output, missing)
 
  

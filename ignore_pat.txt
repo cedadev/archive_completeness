@@ -1,0 +1,7 @@
+/metadata$
+/doc$
+/docs$
+/document$
+/documents$
+/html$
+/software$

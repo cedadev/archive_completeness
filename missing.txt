@@ -107,6 +107,7 @@
 /badc/cmip6/data/CMIP6/C4MIP/NCAR/CESM2/esm-1pct-brch-1000PgC
 /badc/cmip6/data/CMIP6/C4MIP/NCC
 /badc/cmip6/data/CMIP6/CDRMIP/CSIRO
+/badc/cmip6/data/CMIP6/CDRMIP/MIROC/MIROC-ES2L/esm-pi-cdr-pulse
 /badc/cmip6/data/CMIP6/CDRMIP/NCC
 /badc/cmip6/data/CMIP6/CFMIP/CNRM-CERFACS/CNRM-CM6-1/a4SST
 /badc/cmip6/data/CMIP6/CFMIP/CNRM-CERFACS/CNRM-CM6-1/a4SSTice
@@ -191,6 +192,9 @@
 /badc/cmip6/data/CMIP6/LUMIP/CNRM-CERFACS/CNRM-ESM2-1/land-noLu
 /badc/cmip6/data/CMIP6/LUMIP/IPSL/IPSL-CM6A-LR/ssp126-ssp370Lu
 /badc/cmip6/data/CMIP6/LUMIP/IPSL/IPSL-CM6A-LR/ssp370-ssp126Lu
+/badc/cmip6/data/CMIP6/LUMIP/MIROC/MIROC-ES2L/deforest-globe
+/badc/cmip6/data/CMIP6/LUMIP/MIROC/MIROC-ES2L/esm-ssp585-ssp126Lu
+/badc/cmip6/data/CMIP6/LUMIP/MIROC/MIROC-ES2L/hist-noLu
 /badc/cmip6/data/CMIP6/LUMIP/MOHC/HadGEM3-GC31-LL/land-hist
 /badc/cmip6/data/CMIP6/LUMIP/MOHC/UKESM1-0-LL/land-hist
 /badc/cmip6/data/CMIP6/LUMIP/MPI-M/MPI-ESM1-2-LR/hist-noLu
@@ -206,6 +210,7 @@
 /badc/cmip6/data/CMIP6/PAMIP/NCAR/CESM2/piSST-piSIC
 /badc/cmip6/data/CMIP6/PAMIP/NCC
 /badc/cmip6/data/CMIP6/PMIP/CAS/FGOALS-g3/lig127k
+/badc/cmip6/data/CMIP6/PMIP/MIROC/MIROC-ES2L/past1000
 /badc/cmip6/data/CMIP6/PMIP/MRI/MRI-ESM2-0/past1000
 /badc/cmip6/data/CMIP6/PMIP/NCAR/CESM2/lig127k
 /badc/cmip6/data/CMIP6/PMIP/NCAR/CESM2/midPliocene-eoi400
@@ -230,6 +235,8 @@
 /badc/cmip6/data/CMIP6/ScenarioMIP/KIOST
 /badc/cmip6/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp370
 /badc/cmip6/data/CMIP6/ScenarioMIP/NUIST
+/badc/cmip6/data/CMIP6/VolMIP/MIROC/MIROC-ES2L/volc-pinatubo-strat
+/badc/cmip6/data/CMIP6/VolMIP/MIROC/MIROC-ES2L/volc-pinatubo-surf
 /badc/constrain/data/bae-146
 /badc/cops/data/bae-146
 /badc/cordex/data/CORDEX
@@ -501,7 +508,6 @@
 /badc/land-emiss
 /badc/link/data/misc
 /badc/link/data/polcoms
-/badc/link/documents
 /badc/mamm
 /badc/micromix
 /badc/microscope/data/bae-146
@@ -575,7 +581,6 @@
 /badc/sa-monsoon/data/swaami/aerosol-spec
 /badc/sa-monsoon/data/swaami/bae-146
 /badc/sa-monsoon/data/swaami/soot
-/badc/sage2/document
 /badc/sage2/fortran
 /badc/sage2/gif_maps
 /badc/sage2/griddata
@@ -950,7 +955,6 @@
 /neodc/arsf/2019/HyTES19/HyTES19-2019_180b_Norfolk
 /neodc/arsf/atmospherics
 /neodc/arsf/raw_data
-/neodc/atsrubt/software
 /neodc/c3s_sst/data/ICDR_v2/Analysis
 /neodc/c3s_sst/data/ICDR_v2/SLSTR
 /neodc/casix/seawifs_iop
@@ -959,6 +963,9 @@
 /neodc/digital_elevation_models
 /neodc/esacci/aerosol/data/ATSR2_SU/L3/v4.3/MONTHLY
 /neodc/esacci/biomass/data/agb/maps/v2
+/neodc/esacci/ghg/data/cci_plus/CH4_GO2_SRFP/v2.0
+/neodc/esacci/ghg/data/cci_plus/CH4_GO2_SRPR/v2.0
+/neodc/esacci/ghg/data/cci_plus/CO2_GO2_SRFP/v2.0
 /neodc/esacci/sea_level/data/obs4mips
 /neodc/esacci/soil_moisture/data/daily_files/ACTIVE/000_log
 /neodc/esacci/sst/data/comparison
@@ -968,21 +975,17 @@
 /neodc/globalbedo_broadband_albedo
 /neodc/globalbedo_modis_spectral_priors
 /neodc/gome2_metop_c
-/neodc/isar/documents
 /neodc/landmap/data/elevation/dtm5/mosaic
-/neodc/landmap/documents
 /neodc/meris/data/l1b/nrt
 /neodc/meris/data/l2/nrt
 /neodc/mipas-oxford/data/v1.2
 /neodc/ncaveo_field/data/arsf/Docs
 /neodc/ncaveo_lcm2000/data/raster/info
-/neodc/nceo_ard
 /neodc/nceo_biomass_maps/data/manaus
 /neodc/nceo_biomass_maps/data/v1.0
 /neodc/piccolo
 /neodc/qa4ecv/data/dhr_fapar
 /neodc/qa4ecv/data/modis_prior
-/neodc/sister/documents
 /neodc/slstr_calibration
 /neodc/tls/data/global/ls_tree_biomass
 /neodc/tls/data/raw/australia/AEP-33
