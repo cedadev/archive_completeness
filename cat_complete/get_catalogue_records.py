@@ -5,7 +5,7 @@ import time
 
 def get_catalogue_record_paths(cache_filename="catalogue_record_paths_cache.json"):
     url = 'http://api.catalogue.ceda.ac.uk/api/v2/observations/?ordering=uuid'
-    # url = 'http://api.catalogue.ceda.ac.uk/api/v1/observations.json'
+    url = 'http://api.catalogue.ceda.ac.uk/api/v1/observations.json'
     if os.path.exists(cache_filename) and os.path.getmtime(cache_filename) > time.time() - 24*3600:
         return json.load(open(cache_filename))
 
@@ -14,13 +14,16 @@ def get_catalogue_record_paths(cache_filename="catalogue_record_paths_cache.json
         r = requests.get(url=url)
         record_list = r.json()
         for record in record_list["results"]:
+            # print(record)
             result_field = record["result_field"]
+            # print(result_field)
             if result_field is None: 
-                path = f"'{record['title']}' result_field is None"
-            if result_field["storageLocation"] != "internal": 
+                print(f"'{record['title']}' result_field is None")
+                continue
+            elif result_field["storageLocation"] != "internal": 
                 print(f"'{record['title']}' result_field.storageLocation is {result_field['storageLocation']}")
                 continue
-            if result_field["dataPath"] is None: 
+            elif result_field["dataPath"] is None: 
                 print(f"'{record['title']}' result_field.dataPath is None")
                 continue
 

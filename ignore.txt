@@ -85,6 +85,9 @@
 /badc/mgs/data/macda/.v1.0
 /badc/mgs/data/macda/.v1_old
 /badc/mst/.raw
+/badc/mst/catalog
+/badc/mst/images
+/badc/mst/plots
 /badc/ndsc/.test
 /badc/rapid/data/Haines_Rapid1_Round2/NEMO/.NEMO_ORCA025-R07-S_Exp4
 /badc/ukmo-nimrod/.pps_temp

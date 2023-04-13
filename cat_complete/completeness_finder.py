@@ -88,6 +88,12 @@ class AnnotatedDirs:
                 return True
         return False
 
+    def printsubdirs(self, path):
+        for ad_path in self.ad:
+            if ad_path.startswith(path + "/"): 
+                print(ad_path, self.ad[ad_path].annotation)
+        return False
+
     def in_ignore_patterns(self, path):
         for pattern in self.ignore_patterns:
             if pattern.search(path):
@@ -221,6 +227,7 @@ class AnnotatedDirs:
         for directory in self.ad:
             annotateddir = self.ad[directory]
             if self.has_subdirs(annotateddir.directory):
+                self.printsubdirs(directory)
                 print(f" ****** {annotateddir.directory} has sub dirs ? ******")
             self.top_vol -= annotateddir.vol
             self.top_number -= annotateddir.number
