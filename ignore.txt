@@ -102,12 +102,6 @@
 /neodc/arsf/2006/.info
 /neodc/arsf/2008/.info
 /neodc/avhrr3_metop_a/.pps_temp
-/neodc/esacci/ocean_colour/data/v1-release/geographic/png
-/neodc/esacci/ocean_colour/data/v2-release/geographic/png
-/neodc/esacci/ocean_colour/data/v3.1-release/geographic/png
-/neodc/esacci/ocean_colour/data/v4.2-release/documentation
-/neodc/esacci/ocean_colour/data/v4.2-release/geographic/png
-/neodc/esacci/ocean_colour/data/v5.0-release/geographic/png
 /neodc/gome2_metop_a/data/.test_rearrange
 /neodc/nceo_ard
 /neodc/nextmap/.all_tiles

@@ -5,3 +5,4 @@
 /documents$
 /html$
 /software$
+/neodc/esacci/.*/png$
