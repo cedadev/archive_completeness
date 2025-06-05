@@ -6,3 +6,4 @@
 /html$
 /software$
 /neodc/esacci/.*/png$
+/.testing$

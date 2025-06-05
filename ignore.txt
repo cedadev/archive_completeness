@@ -45,11 +45,7 @@
 /badc/corral/.bin
 /badc/cru/data/crutem/.crutem4
 /badc/ecmwf-e40/.cdml
-/badc/ecmwf-e40/.cdml
 /badc/ecmwf-e40/.daily_avs
-/badc/ecmwf-e40/.user_cdml
-/badc/ecmwf-e40/.user_cdml
-/badc/ecmwf-era/.cdml
 /badc/ecmwf-era/.cdml
 /badc/eprofile/data/austria
 /badc/eprofile/data/belgium
@@ -108,3 +104,4 @@
 /ngdc
 /pdc
 /sparc
+/bodc

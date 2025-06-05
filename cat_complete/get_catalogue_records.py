@@ -10,7 +10,7 @@ def get_catalogue_record_paths(cache_filename="catalogue_record_paths_cache.json
     # url = 'http://api.catalogue.ceda.ac.uk/api/v2/observations.json?limit=200'  
    
     # needs doing in one lump. pagination does not work.
-    url = 'http://api.catalogue.ceda.ac.uk/api/v1/observations.json?limit=12000&offset=0'  
+    url = 'https://api.catalogue.ceda.ac.uk/api/v2/observations/?fields=uuid,result_field,title,publicationState'  
     
     if os.path.exists(cache_filename) and os.path.getmtime(cache_filename) > time.time() - cache_ttl:
         return json.load(open(cache_filename))

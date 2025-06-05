@@ -62,6 +62,7 @@
 /badc/chilbolton/docs
 /badc/chilbolton/metadata
 /badc/chilbolton/software
+/badc/cira/.testing
 /badc/cira/doc
 /badc/cira/metadata
 /badc/claesl3/doc
@@ -246,6 +247,7 @@
 /badc/ukcip02/metadata
 /badc/ukcp09/docs
 /badc/ukcp09/metadata
+/badc/ukcp18/metadata
 /badc/ukmo-aam/doc
 /badc/ukmo-aam/software
 /badc/ukmo-africa-lam/doc
@@ -361,6 +363,9 @@
 /neodc/esacci/permafrost/docs
 /neodc/esacci/permafrost/metadata
 /neodc/esacci/reccap2/docs
+/neodc/esacci/reccap2/metadata
+/neodc/esacci/river_discharge/docs
+/neodc/esacci/river_discharge/metadata
 /neodc/esacci/sea_ice/docs
 /neodc/esacci/sea_ice/metadata
 /neodc/esacci/sea_level/docs
@@ -376,6 +381,7 @@
 /neodc/esacci/sst/doc
 /neodc/esacci/sst/metadata
 /neodc/esacci/vegetation_parameters/docs
+/neodc/esacci/water_vapour/metadata
 /neodc/eustace/metadata
 /neodc/glas_veg_height/metadata
 /neodc/globolakes/docs
@@ -406,5 +412,6 @@
 /neodc/sentinel3a/metadata
 /neodc/sentinel3b/metadata
 /neodc/sentinel5p/metadata
+/neodc/sentinel_ard/metadata
 /neodc/seviri_frp/metadata
 /neodc/sister/documents
